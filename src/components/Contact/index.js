@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
-import styled from 'styled-components';
-import emailjs from '@emailjs/browser';
-import { Snackbar, SnackbarContent } from '@mui/material';
+import React, { useRef, useState } from "react";
+import styled from "styled-components";
+import emailjs from "@emailjs/browser";
+import { Snackbar, SnackbarContent } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
@@ -106,9 +106,21 @@ const ContactButton = styled.input`
   text-decoration: none;
   text-align: center;
   background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
@@ -125,7 +137,12 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_9x4u1qc", "template_94szrck", formRef.current, "sTwVr3fZmNYdaP9m5")
+      .sendForm(
+        "service_je4mc2e",
+        "template_axl5wdj",
+        formRef.current,
+        "FIGeHQ6uR0u2hoGIV"
+      )
       .then(
         (result) => {
           setOpenSnackbar(true);
@@ -141,7 +158,9 @@ const Contact = () => {
     <Container>
       <Wrapper>
         <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Desc>
+          Feel free to reach out to me for any questions or opportunities!
+        </Desc>
         <ContactForm ref={formRef} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />

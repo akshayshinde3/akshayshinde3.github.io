@@ -9,7 +9,8 @@ export const Bio = {
   description:
     "Hello, I'm a recent Mechanical Engineering graduate eager to embark on a DevOps journey. Passionate about technology and problem-solving, my diverse background uniquely positions me to bring innovative perspectives to DevOps. I'm committed to learning, adapting, and enhancing efficiency in software development and operations. Excited to collaborate and drive impactful solutions.",
   github: "https://github.com/akshayshinde3",
-  resume: "#",
+  resume:
+    "https://drive.google.com/file/d/1FkehjvxD4GVsTNXAhmhAqj2xJqgqCuXa/view",
   linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
   // twitter: "#",
   // insta: "#",
@@ -196,6 +197,38 @@ export const projects = [
     tags: ["Docker"],
     category: "Docker",
     github: "https://github.com/akshayshinde3/DevSecOps_ToDo_App",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://media.licdn.com/dms/image/D4D03AQEQWOYBA1fQ_w/profile-displayphoto-shrink_800_800/0/1711306094055?e=1717632000&v=beta&t=KEP5KFNevf0VACo7dCpplZyhmJrSh79d0nWXPlw_qFk",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Three Tier Application Deployment On AWS EKS",
+    date: "April 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
+    description:
+      "Developed and deployed a scalable three-tier application (ReactJS,NodeJS, and MongoDB) on AWS EKS.",
+    description2:
+      "Utilized Kubernetes for orchestration and AWS ALB for load balancing, ensuring efficient performance.",
+    description3:
+      "Gained hands-on experience in cloud-native technologies and containerization.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Kubernetes-Logo.jpg?alt=media&token=c3d092e7-d1f6-48f6-8835-def1b492c098",
+    tags: ["Kubernetes"],
+    category: "Kubernetes",
+    github: "https://github.com/akshayshinde3/TWSThreeTierAppChallenge",
     dashboard: "#",
     member: [
       {

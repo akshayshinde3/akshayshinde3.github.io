@@ -30,6 +30,12 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="Docker" onClick={() => setToggle('Docker')}>Docker</ToggleButton>
           }
           <Divider />
+          {toggle === 'Kubernetes' ?
+            <ToggleButton active value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
+            :
+            <ToggleButton value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
+          }
+          <Divider />
           {/* {toggle === 'Excel Dashboard' ?
             <ToggleButton active value="Excel Dashboard" onClick={() => setToggle('Excel Dashboard')}>Excel Dashboard</ToggleButton>
             :

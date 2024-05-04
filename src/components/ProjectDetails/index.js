@@ -297,7 +297,7 @@ const index = ({ openModal, setOpenModal }) => {
               View on Github
             </Button>
             <Button href={project?.dashboard} target="new">
-              View Live Dashboard
+              View Web App
             </Button>
           </ButtonGroup>
         </Wrapper>
