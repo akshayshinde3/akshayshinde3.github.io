@@ -133,7 +133,7 @@ export const education = [
   {
     id: 1,
     img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABBVBMVEX////49uzqikny7N/v4c/vkmHumWTr2cb///3///zmxqPull3wmGPpvpn7///p07ztiUTqllruiErmyar//v/8/PPxj1LjvJjv4tbop3nuk1LqkFbnpG/sjFjpuJTsnGnxm2/vnGrqt43pomrxmGbonGPlmFflsIbaijjz7dr4///chjnmv47kqXPmk0vFxcva2Nypqbrg4Ofbn1/p6eegna2QjJ2YlKmNhp7r7ObY2NrR0cwwJVRMQ2ePiqS7ur0AADx5c44AAEHDvco+NV5eWH2rqL5rZH2DfJdybJIKAGaEfoyloat6dJSbl7AOAE4fE0rmbwDdaADmfyTl0Kji07DiwI7Q1HqpAAACdElEQVR4AX1ShYKjMBQcqliTw1aASpD2riuQNpR1d8/a/3/K0XPrTTyZPMfvUGq1Ov6HRrPVXvyqQtMNs0M0dSGBfrAs2yHuIoLq6UtLy4q6SIKLlVU/CNuLNRCnaxiBToB/C2n0+saAGf2oMaf8/RwHjLX6SSsZGOnvaiqBqtsLmGkNe2kYpX7CghGBRn4yiBea/SD6CPJJwXhtPWBJPNZ+NW+j1d9sEDXLeT5xVdRrjMW/hIPQbjKceoIXxYyXZQ5lIx009V80WH1fgdjiubItxLbQJlAsFng/4tM2gmUIZWd3Z282289EdsDRMQxKvvqikl6zv+zyw+zw6HhWHh8d7mbl9nrYir4QPIeQuEnB+Q4/EcgFdk5ORZaBdvsgjoaGr48D30OZiZMdVAQV+Z7IC2h+MHaW2qgvdWngN1CIs3Nk6sWp2MX+pZi5DSuoHuogVpO2UuoW4qqEe31zc65hdrt9JWhqUdPSQEYJM3pwS3F3Bc07uNaA40NtS2DZTJNVAjgma/WAe3F5BvCbmweo+zMhXHQSZuoEasNgbJWoAvljATGZTFA8TQCCueg2AeYEQ9cAN3ucqdVy+5h/qb60z4wGAGoy5vcIALFz9rS/v3eWi4ow7viMtRyAxKaZWB3N8zxNU24Ps1ul2mge9GbTMIdjbEgZTqV8/gopf9nGo2cZ4kW20w35WsF5jXS6Lkdvr/qrs/62KTcCKiVkPB5TOYzWN6bDzVgfypf3cBqOhqMXqaOSj3i0HnXiNE7DNI7TKIorzI/VKYrWoxinBS+L8uCKX0we+Cm/4FVJZZOCV7f84eGCo+1Q6sxRzT9QHb5d08+fQmHNF1ScpQAAAABJRU5ErkJggg==",
-    school: "Government Ploytechnic Aurangabad",
+    school: "Government Polytechnic Aurangabad",
     date: "Apr 2018 - Apr 2021",
     grade: "82.00%",
     desc: "I have completed My Diploma In Mechanical Engineering at Government Ploytechnic,Aurangabad.",
