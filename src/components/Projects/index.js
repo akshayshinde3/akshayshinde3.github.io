@@ -36,11 +36,27 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
           }
           <Divider />
+
           {/* {toggle === 'Excel Dashboard' ?
             <ToggleButton active value="Excel Dashboard" onClick={() => setToggle('Excel Dashboard')}>Excel Dashboard</ToggleButton>
             :
             <ToggleButton value="Excel Dashboard" onClick={() => setToggle('Excel Dashboard')}>Excel Dashboard</ToggleButton>
           } */}
+          <Divider />
+          {toggle === 'AWS' ?
+            <ToggleButton active value="AWS" onClick={() => setToggle('AWS')}>AWS</ToggleButton>
+            :
+            <ToggleButton value="AWS" onClick={() => setToggle('AWS')}>AWS</ToggleButton>
+          }
+          <Divider />
+          <Divider />
+          {toggle === 'Terraform And Ansible' ?
+            <ToggleButton active value="Terraform And Ansible" onClick={() => setToggle('Terraform And Ansible')}>Terraform And Ansible</ToggleButton>
+            :
+            <ToggleButton value="Terraform And Ansible" onClick={() => setToggle('Terraform And Ansible')}>Terraform And Ansible</ToggleButton>
+          }
+          <Divider />
+          
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === 'all' && projects

@@ -15,7 +15,7 @@ import {
   SocialMediaIcon,
   ResumeButton,
 } from "./HeroStyle";
-import HeroImg from "../../images/Hero.png";
+import HeroImg from "../../images/Hero.jpg";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
 import { motion } from "framer-motion";
@@ -67,7 +67,7 @@ const HeroSection = () => {
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
                 <Tilt>
-                  <Img src={HeroImg} alt="Sandesh Arsud" />
+                  <Img src={HeroImg} alt="Akshay Shinde" />
                 </Tilt>
               </motion.div>
             </HeroRightContainer>

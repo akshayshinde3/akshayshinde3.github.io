@@ -7,7 +7,7 @@ export const Bio = {
     // "Programmer",
   ],
   description:
-    "Hello, I'm a recent Mechanical Engineering graduate eager to embark on a DevOps journey. Passionate about technology and problem-solving, my diverse background uniquely positions me to bring innovative perspectives to DevOps. I'm committed to learning, adapting, and enhancing efficiency in software development and operations. Excited to collaborate and drive impactful solutions.",
+    "Hello, I'm Akshay, a DevOps engineer with a flair for streamlining operations through the magic of automation, continuous integration, and deployment. Over the past year, I've honed my skills and expertise in the dynamic fields of DevOps and cloud computing. My journey has been marked by hands-on experience and a deep dive into the world of cutting-edge technologies.",
   github: "https://github.com/akshayshinde3",
   resume:
     "https://drive.google.com/file/d/1FkehjvxD4GVsTNXAhmhAqj2xJqgqCuXa/view",
@@ -136,7 +136,7 @@ export const education = [
     school: "Government Polytechnic Aurangabad",
     date: "Apr 2018 - Apr 2021",
     grade: "82.00%",
-    desc: "I have completed My Diploma In Mechanical Engineering at Government Ploytechnic,Aurangabad.",
+    desc: "I have completed My Diploma In Mechanical Engineering at Government Polytechnic,Aurangabad.",
     degree: "Diploma In Mechanical Engineering",
   },
 ];
@@ -168,7 +168,7 @@ export const projects = [
     member: [
       {
         name: "Akshay Shinde",
-        img: "https://media.licdn.com/dms/image/D4D03AQEQWOYBA1fQ_w/profile-displayphoto-shrink_800_800/0/1711306094055?e=1717632000&v=beta&t=KEP5KFNevf0VACo7dCpplZyhmJrSh79d0nWXPlw_qFk",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
         linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
         github: "https://github.com/akshayshinde3",
       },
@@ -201,7 +201,7 @@ export const projects = [
     member: [
       {
         name: "Akshay Shinde",
-        img: "https://media.licdn.com/dms/image/D4D03AQEQWOYBA1fQ_w/profile-displayphoto-shrink_800_800/0/1711306094055?e=1717632000&v=beta&t=KEP5KFNevf0VACo7dCpplZyhmJrSh79d0nWXPlw_qFk",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
         linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
         github: "https://github.com/akshayshinde3",
       },
@@ -233,7 +233,71 @@ export const projects = [
     member: [
       {
         name: "Akshay Shinde",
-        img: "https://media.licdn.com/dms/image/D4D03AQEQWOYBA1fQ_w/profile-displayphoto-shrink_800_800/0/1711306094055?e=1717632000&v=beta&t=KEP5KFNevf0VACo7dCpplZyhmJrSh79d0nWXPlw_qFk",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: "Automated the deployment of a Node JS Application on serverless AWS ECS FARGET",
+    date: "June 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
+    description:
+      " Implemented an automated deployment process for a Node.js application using AWS ECS Fargate, ensuring efficient and serverless application hosting.",
+    description2:
+      "Utilized AWS ECR for container image repository management, facilitating seamless image storage and retrieval.",
+    description3:
+      "Integrated AWS CloudWatch for comprehensive logging and monitoring, coupled with proper IAM roles and configurations to maintain robust security and access control.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Automated%20the%20deployment%20of%20a%20Node%20JS%20Application%20on%20serverless%20AWS%20ECS%20FARGET.gif?alt=media&token=b986c852-d50d-4f76-8289-2112e2a7f268",
+    tags: ["AWS"],
+    category: "AWS",
+    github: "https://github.com/akshayshinde3/node-todo-Aws_serverless",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: "Automated Deployment Pipeline Using Jenkins, Terraform, and Ansible",
+    date: "June 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
+    description:
+      "Automated AWS EC2 instance setup and S3 bucket configuration",
+    description2:
+      "Configured Jenkins for CI/CD and integrated necessary plugins.",
+    description3:
+      "Deployed website across multiple EC2 instances using Ansible with dynamic inventory.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Automated%20Deployment%20Pipeline%20Using%20Jenkins%2C%20Terraform%2C%20and%20Ansible.gif?alt=media&token=fde90201-751f-4f41-ac7d-86aaa0134c98",
+    tags: ["Terraform","Ansible","Jenkins"],
+    category: "Terraform And Ansible",
+    github: "https://github.com/akshayshinde3/Terraform-Ansible-Project",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
         linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
         github: "https://github.com/akshayshinde3",
       },
