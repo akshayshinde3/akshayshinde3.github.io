@@ -67,7 +67,7 @@ const HeroSection = () => {
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
                 <Tilt>
-                  <Img src={HeroImg} alt="Sandesh Arsud" />
+                  <Img src={HeroImg} alt="Akshay Shinde" />
                 </Tilt>
               </motion.div>
             </HeroRightContainer>
