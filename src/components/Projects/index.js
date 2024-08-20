@@ -30,6 +30,24 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="Docker" onClick={() => setToggle('Docker')}>Docker</ToggleButton>
           }
           <Divider />
+          {toggle === 'Kubernetes' ?
+            <ToggleButton active value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
+            :
+            <ToggleButton value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
+          }
+          <Divider />
+          {toggle === 'Microsoft Azure' ?
+            <ToggleButton active value="Microsoft Azure" onClick={() => setToggle('Microsoft Azure')}>Microsoft Azure</ToggleButton>
+            :
+            <ToggleButton value="Microsoft Azure" onClick={() => setToggle('Microsoft Azure')}>Microsoft Azure</ToggleButton>
+          }
+          <Divider />
+          {toggle === 'GitHub Action' ?
+            <ToggleButton active value="GitHub Action" onClick={() => setToggle('GitHub Action')}>GitHub Action</ToggleButton>
+            :
+            <ToggleButton value="GitHub Action" onClick={() => setToggle('GitHub Action')}>GitHub Action</ToggleButton>
+          }
+          <Divider />
           {/* {toggle === 'Excel Dashboard' ?
             <ToggleButton active value="Excel Dashboard" onClick={() => setToggle('Excel Dashboard')}>Excel Dashboard</ToggleButton>
             :
