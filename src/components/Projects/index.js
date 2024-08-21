@@ -48,32 +48,21 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="GitHub Action" onClick={() => setToggle('GitHub Action')}>GitHub Action</ToggleButton>
           }
           <Divider />
-          {toggle === 'Kubernetes' ?
-            <ToggleButton active value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
-            :
-            <ToggleButton value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
-          }
-          <Divider />
-
-          {/* {toggle === 'Excel Dashboard' ?
-            <ToggleButton active value="Excel Dashboard" onClick={() => setToggle('Excel Dashboard')}>Excel Dashboard</ToggleButton>
-            :
-            <ToggleButton value="Excel Dashboard" onClick={() => setToggle('Excel Dashboard')}>Excel Dashboard</ToggleButton>
-          } */}
-          <Divider />
           {toggle === 'AWS' ?
             <ToggleButton active value="AWS" onClick={() => setToggle('AWS')}>AWS</ToggleButton>
             :
             <ToggleButton value="AWS" onClick={() => setToggle('AWS')}>AWS</ToggleButton>
           }
           <Divider />
-          <Divider />
-          {toggle === 'Terraform And Ansible' ?
-            <ToggleButton active value="Terraform And Ansible" onClick={() => setToggle('Terraform And Ansible')}>Terraform And Ansible</ToggleButton>
+          {toggle === 'Terraform' ?
+            <ToggleButton active value="Terraform" onClick={() => setToggle('Terraform')}>Terraform</ToggleButton>
             :
-            <ToggleButton value="Terraform And Ansible" onClick={() => setToggle('Terraform And Ansible')}>Terraform And Ansible</ToggleButton>
+            <ToggleButton value="Terraform" onClick={() => setToggle('Terraform')}>Terraform</ToggleButton>
           }
-          <Divider />
+          <Divider/>
+
+          
+          
           
         </ToggleButtonGroup>
         <CardContainer>
