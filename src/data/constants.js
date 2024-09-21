@@ -517,4 +517,38 @@ export const projects = [
       },
     ],
   },
+  {
+    id: 19,
+    title:
+      "Automated Deployment of Scalable Applications on AWS EC2 with Kubernetes and Argo CD",
+    date: "Sept 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
+    description:
+      "AWS EC2: Infrastructure hosting for Kubernetes clusters.",
+    description2:
+      "Kubernetes Dashboard: User-friendly interface for managing containerized applications.",
+    description3:
+      "Argo CD: Continuous Delivery tool for automated application deployments.",
+
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D22AQGIUzUhW95KbA/feedshare-shrink_800/feedshare-shrink_800/0/1726332468464?e=1729728000&v=beta&t=INC0xmg30HaLKTpi0tWPPXjuvVDSSKjqNekGKCetA10",
+    tags: ["Grafana"],
+    category: "Grafana",
+    github: "https://github.com/akshayshinde3/k8s-kind-voting-app.git",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  
 ];

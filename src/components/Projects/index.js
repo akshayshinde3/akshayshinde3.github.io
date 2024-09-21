@@ -60,6 +60,13 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="Terraform" onClick={() => setToggle('Terraform')}>Terraform</ToggleButton>
           }
           <Divider/>
+          
+          {toggle === 'Grafana' ?
+            <ToggleButton active value="Grafana" onClick={() => setToggle('Grafana')}>Grafana</ToggleButton>
+            :
+            <ToggleButton value="Grafana" onClick={() => setToggle('Grafana')}>Grafana</ToggleButton>
+          }
+          <Divider/>
 
           
           
