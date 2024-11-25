@@ -174,7 +174,7 @@ export const projects = [
       "• This initiative not only honed my expertise in CI/CD pipeline construction and security practices within DevOps but also deepened my understanding of containerization techniques, underscoring a holistic approach to DevSecOps.",
 
     image:
-      "https://www.crowdstrike.com/wp-content/uploads/2018/10/Jenkins-blog-image-1.jpg",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/DevSecOps.gif?alt=media&token=c3ad6969-8243-441a-958e-d052521e071d",
     tags: ["Jenkins"],
     category: "Jenkins",
     github: "https://github.com/akshayshinde3/DevSecOps_ToDo_App",
@@ -240,7 +240,7 @@ export const projects = [
       "Terraform & Ansible Integration: Utilized Terraform for infrastructure as code and Ansible for dynamic inventory and automated deployment across multiple EC2 instances.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQGAbfxxL65bSg/feedshare-shrink_1280/feedshare-shrink_1280/0/1718727303476?e=1727308800&v=beta&t=-m_SjG_o2ku1f4WpfPXVvnWNpXlb4rKeT92rEqAV25Y",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Jenkins%20-%20Copy.gif?alt=media&token=0765b314-e836-4339-bc6a-fd69a451139a",
     tags: ["Terraform"],
     category: "Terraform",
     github: "https://github.com/akshayshinde3/Terraform-Ansible-Project",
@@ -305,7 +305,7 @@ export const projects = [
       "Secure Configuration: Ensured robust security with carefully configured IAM roles.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQHQx4gnFdq5rg/feedshare-shrink_1280/feedshare-shrink_1280/0/1718211016495?e=1727308800&v=beta&t=xq6SAD9bkQY3ikL-LsbJxyjWgMvD-z5hZKBtf9xV4eE",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Automated%20the%20deployment%20of%20a%20Node%20JS%20Application%20on%20serverless%20AWS%20ECS%20FARGET.gif?alt=media&token=b986c852-d50d-4f76-8289-2112e2a7f268",
     tags: ["AWS"],
     category: "AWS",
     github: "https://github.com/akshayshinde3/node-todo-Aws_serverless",
@@ -338,7 +338,7 @@ export const projects = [
       "Achieved reliable performance and scalability through Tomcat server deployment.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQHQx4gnFdq5rg/feedshare-shrink_1280/feedshare-shrink_1280/0/1718211016495?e=1727308800&v=beta&t=xq6SAD9bkQY3ikL-LsbJxyjWgMvD-z5hZKBtf9xV4eE",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/tomcat.gif?alt=media&token=08979371-cfc0-4b64-b686-a00de68aa12d",
     tags: ["Jenkins"],
     category: "Jenkins",
     github: "https://github.com/akshayshinde3/tomcat-server-web-deploy",
@@ -371,7 +371,7 @@ export const projects = [
       "Microservices Architecture: Advocate for microservices to enhance modularity, resilience, and scalability.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQH3rAVh74e_zA/feedshare-shrink_1280/feedshare-shrink_1280/0/1721660313831?e=1727308800&v=beta&t=mcH37o2-L9WtuvRZb3NRw1qoAZT2qDSAKVGgYWe6_Kc",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/microservice.gif?alt=media&token=a654be9e-c738-4e48-a4f9-7865991dde79",
     tags: ["Kubernetes"],
     category: "Kubernetes",
     github: "https://github.com/akshayshinde3/MicroService",
@@ -404,7 +404,7 @@ export const projects = [
       "Security & Code Quality: Integrated Trivy and SonarQube for early vulnerability detection and adherence to coding standards.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQFwb09o4P9VMA/feedshare-shrink_1280/feedshare-shrink_1280/0/1722697603582?e=1727308800&v=beta&t=_F6qcUzudaah2OWfGhZdkbhXGZFYyRQlrHpbPf-WKMg",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Azure%20CICD%20-%20Copy.gif?alt=media&token=adb6e581-6b60-4249-84fe-ac9e0798a872",
     tags: ["Microsoft Azure"],
     category: "Microsoft Azure",
     github: "https://github.com/akshayshinde3/Board-game-Azurepipeline",
@@ -437,7 +437,7 @@ export const projects = [
       "Azure Artifacts & OWASP: Managed packages and adhered to security best practices, enhancing the overall robustness of the CI/CD pipeline.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQF1EMngetYVZA/feedshare-shrink_1280/feedshare-shrink_1280/0/1722852458362?e=1727308800&v=beta&t=g9i7YD8UX6ge9ifCYNh3JOnUVL7UkT_0qfgrcRV6vlI",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Azure%20with%20AKS.gif?alt=media&token=2e7dba60-f4aa-41cb-aa0d-df45ade3bec8",
     tags: ["Microsoft Azure"],
     category: "Microsoft Azure",
     github: "https://github.com/akshayshinde3/E-kart-maven-CI",
@@ -470,7 +470,7 @@ export const projects = [
       "GitHub Actions Workflow: Configurable processes that are triggered by GitHub events to automate tasks like building, testing, packaging, and deploying your project.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQG2NajPBRZdZA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723300474704?e=1727308800&v=beta&t=n4Q6qVHbZWEpnB0FRUZz3EQA3q0QslJ3xiiyavW5R70",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Github%20Action%20-%20Copy.gif?alt=media&token=c121fe1c-5398-448d-94d5-dff7900e811a",
     tags: ["GitHub Action"],
     category: "GitHub Action",
     github: "https://github.com/akshayshinde3/node-todo-web-app",
@@ -503,7 +503,7 @@ export const projects = [
       "Focus on Efficiency: Committed to minimizing time and errors in every project deployment.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQGybNVR7T1T3A/feedshare-shrink_1280/feedshare-shrink_1280/0/1724059372318?e=1727308800&v=beta&t=Ni-CVEMfT_ehpvfUEa5MUxS5e8fI5S9GX2_UQN06wLc",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Github%20Action.gif?alt=media&token=b2253923-6799-47a3-9ea0-997c8641537e",
     tags: ["GitHub Action"],
     category: "GitHub Action",
     github: "https://github.com/akshayshinde3/DevOps-Assessment-Gitaction",
@@ -536,7 +536,7 @@ export const projects = [
       "Argo CD: Continuous Delivery tool for automated application deployments.",
 
     image:
-      "https://media.licdn.com/dms/image/v2/D4D22AQGIUzUhW95KbA/feedshare-shrink_800/feedshare-shrink_800/0/1726332468464?e=1729728000&v=beta&t=INC0xmg30HaLKTpi0tWPPXjuvVDSSKjqNekGKCetA10",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Monitoring.gif?alt=media&token=fcdb8f5f-a195-4935-bb80-492f1062d932",
     tags: ["Grafana"],
     category: "Grafana",
     github: "https://github.com/akshayshinde3/k8s-kind-voting-app.git",
