@@ -18,59 +18,25 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
           }
           <Divider />
-          {toggle === 'Jenkins' ?
-            <ToggleButton active value="Jenkins" onClick={() => setToggle('Jenkins')}>Jenkins</ToggleButton>
-            :
-            <ToggleButton value="Jenkins" onClick={() => setToggle('Jenkins')}>Jenkins</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'Docker' ?
-            <ToggleButton active value="Docker" onClick={() => setToggle('Docker')}>Docker</ToggleButton>
-            :
-            <ToggleButton value="Docker" onClick={() => setToggle('Docker')}>Docker</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'Kubernetes' ?
-            <ToggleButton active value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
-            :
-            <ToggleButton value="Kubernetes" onClick={() => setToggle('Kubernetes')}>Kubernetes</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'Microsoft Azure' ?
-            <ToggleButton active value="Microsoft Azure" onClick={() => setToggle('Microsoft Azure')}>Microsoft Azure</ToggleButton>
-            :
-            <ToggleButton value="Microsoft Azure" onClick={() => setToggle('Microsoft Azure')}>Microsoft Azure</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'GitHub Action' ?
-            <ToggleButton active value="GitHub Action" onClick={() => setToggle('GitHub Action')}>GitHub Action</ToggleButton>
-            :
-            <ToggleButton value="GitHub Action" onClick={() => setToggle('GitHub Action')}>GitHub Action</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'AWS' ?
-            <ToggleButton active value="AWS" onClick={() => setToggle('AWS')}>AWS</ToggleButton>
-            :
-            <ToggleButton value="AWS" onClick={() => setToggle('AWS')}>AWS</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'Terraform' ?
-            <ToggleButton active value="Terraform" onClick={() => setToggle('Terraform')}>Terraform</ToggleButton>
-            :
-            <ToggleButton value="Terraform" onClick={() => setToggle('Terraform')}>Terraform</ToggleButton>
-          }
-          <Divider/>
-          
-          {toggle === 'Grafana' ?
-            <ToggleButton active value="Grafana" onClick={() => setToggle('Grafana')}>Grafana</ToggleButton>
-            :
-            <ToggleButton value="Grafana" onClick={() => setToggle('Grafana')}>Grafana</ToggleButton>
-          }
-          <Divider/>
+{toggle === 'CI/CD' ? (
+  <ToggleButton active value="CI/CD" onClick={() => setToggle('CI/CD')}>CI/CD</ToggleButton>
+) : (
+  <ToggleButton value="CI/CD" onClick={() => setToggle('CI/CD')}>CI/CD</ToggleButton>
+)}
+<Divider />
+{toggle === 'containerization and orchestration' ? (
+  <ToggleButton active value="containerization and orchestration" onClick={() => setToggle('containerization and orchestration')}>containerization and orchestration</ToggleButton>
+) : (
+  <ToggleButton value="containerization and orchestration" onClick={() => setToggle('containerization and orchestration')}>containerization and orchestration</ToggleButton>
+)}
+<Divider />
+{toggle === 'Cloud Automation & Monitoring' ? (
+  <ToggleButton active value="Cloud Automation & Monitoring" onClick={() => setToggle('Cloud Automation & Monitoring')}>Cloud Automation & Monitoring</ToggleButton>
+) : (
+  <ToggleButton value="Cloud Automation & Monitoring" onClick={() => setToggle('Cloud Automation & Monitoring')}>Cloud Automation & Monitoring</ToggleButton>
+)}
+<Divider />
 
-          
-          
-          
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === 'all' && projects

@@ -122,14 +122,25 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "",
-    role: "",
-    company: "",
-    date: "",
-    desc: "",
-    desc2: "",
-    desc3: "",
-    skills: ["", "", ""],
+    img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Mountreach%20Solution%20Pvt.%20Ltd..jpeg?alt=media&token=a55887ec-5f41-4431-a84e-878981b3df2a",
+    role: "DevOps Intern",
+    company: "Mountreach Solution Pvt. Ltd.",
+    date: "Feb-2024 to July-2024",
+    desc: "Implemented GitHub Actions to automate the development workflow, leading to faster delivery and fewer errors.",
+    desc2: "Developed workflows to automate tasks in GitHub Actions, including developing, testing, packaging, and deploying applications.",
+    desc3: "Utilized AWS ECS for scalable and efficient containerized application deployment, with easy connection into CI/CD pipelines.",
+    skills: ["AWS", "Docker", "AWS ECS","Github Actions"],
+    doc: "",
+  },
+  {
+    id: 1,
+    img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/mortars%20pvt%20ltd.jpg?alt=media&token=e22d2415-c7c7-435b-95d2-d6a7a0f74be0",
+    role: "DevOps Intern",
+    company: "MORTARS TECHNOLOGIES PRIVATE LIMITED",
+    date: "Oct-2024 – Jan-2025",
+    desc: "Deployed a two-tier Java application on Amazon EKS with Kubernetes, leveraging GitHub Actions to automate CI/CD pipelines, container management, and deployment configurations",
+    desc2: "Configured Kubernetes resources, Docker containers, and secure connections between application and MySQL database, with integrated code quality and security scans.       ",
+    skills: ["Kubernetes", "Github Action", "Docker", "Sonarcube","Trivy","AWS"],
     doc: "",
   },
 ];
@@ -176,40 +187,7 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/DevSecOps.gif?alt=media&token=c3ad6969-8243-441a-958e-d052521e071d",
     tags: ["Jenkins"],
-    category: "Jenkins",
-    github: "https://github.com/akshayshinde3/DevSecOps_ToDo_App",
-    dashboard: "#",
-    member: [
-      {
-        name: "Akshay Shinde",
-        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
-        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
-        github: "https://github.com/akshayshinde3",
-      },
-    ],
-  },
-  {
-    id: 12,
-    title:
-      "CONTAINERIZATION OF A TWO-TIER APPLICATION USING DOCKER, DOCKER COMPOSE AND IMAGE SCANNING WITH DOCKER SCOUT",
-    date: "Mar 2024",
-    ascdetails: [
-      {
-        name: "Train With Shubham",
-        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
-      },
-    ],
-    description:
-      "• Successfully containerized a two-tier application using Docker and orchestrated the deployment with Docker Compose.",
-    description2:
-      "Gained expertise in Dockerimage creation, management and performed vulnerability scanning using Docker Scout.",
-    description3:
-      "This project enhanced my understanding of containerization, network communication between containers and security practices in Docker environments.",
-
-    image:
-      "https://d1.awsstatic.com/acs/characters/Logos/Docker-Logo_Horizontel_279x131.b8a5c41e56b77706656d61080f6a0217a3ba356d.png",
-    tags: ["Docker"],
-    category: "Docker",
+    category: "CI/CD",
     github: "https://github.com/akshayshinde3/DevSecOps_ToDo_App",
     dashboard: "#",
     member: [
@@ -242,7 +220,7 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Jenkins%20-%20Copy.gif?alt=media&token=0765b314-e836-4339-bc6a-fd69a451139a",
     tags: ["Terraform"],
-    category: "Terraform",
+    category: "Cloud Automation & Monitoring",
     github: "https://github.com/akshayshinde3/Terraform-Ansible-Project",
     dashboard: "#",
     member: [
@@ -274,7 +252,7 @@ export const projects = [
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1713970716490/e39fcfed-143b-4972-8d39-651a80ff0dd9.gif?w=1600&h=840&fit=crop&crop=entropy&auto=format,compress&gif-q=60&format=webm",
     tags: ["Kubernetes"],
-    category: "Kubernetes",
+    category: "containerization and orchestration",
     github: "https://github.com/akshayshinde3/TWSThreeTierAppChallenge",
     dashboard: "#",
     member: [
@@ -307,41 +285,8 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Automated%20the%20deployment%20of%20a%20Node%20JS%20Application%20on%20serverless%20AWS%20ECS%20FARGET.gif?alt=media&token=b986c852-d50d-4f76-8289-2112e2a7f268",
     tags: ["AWS"],
-    category: "AWS",
+    category: "Cloud Automation & Monitoring",
     github: "https://github.com/akshayshinde3/node-todo-Aws_serverless",
-    dashboard: "#",
-    member: [
-      {
-        name: "Akshay Shinde",
-        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
-        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
-        github: "https://github.com/akshayshinde3",
-      },
-    ],
-  },
-  {
-    id: 13,
-    title:
-      " Seamless Website Deployment on Tomcat Server with Jenkins CI/CD",
-    date: "June 2024",
-    ascdetails: [
-      {
-        name: "DevOps Shacks",
-        img: "https://d502jbuhuh9wk.cloudfront.net/logos/64b773fee4b04146dfa907bd.png?v=9",
-      },
-    ],
-    description:
-      "Implemented Jenkins CI/CD pipeline for automated deployment.",
-    description2:
-      "Integrated SSH Server and Container Deploy plugins for robust deployment.",
-    description3:
-      "Achieved reliable performance and scalability through Tomcat server deployment.",
-
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/tomcat.gif?alt=media&token=08979371-cfc0-4b64-b686-a00de68aa12d",
-    tags: ["Jenkins"],
-    category: "Jenkins",
-    github: "https://github.com/akshayshinde3/tomcat-server-web-deploy",
     dashboard: "#",
     member: [
       {
@@ -373,7 +318,7 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/microservice.gif?alt=media&token=a654be9e-c738-4e48-a4f9-7865991dde79",
     tags: ["Kubernetes"],
-    category: "Kubernetes",
+    category: "containerization and orchestration",
     github: "https://github.com/akshayshinde3/MicroService",
     dashboard: "#",
     member: [
@@ -406,41 +351,8 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Azure%20CICD%20-%20Copy.gif?alt=media&token=adb6e581-6b60-4249-84fe-ac9e0798a872",
     tags: ["Microsoft Azure"],
-    category: "Microsoft Azure",
+    category: "CI/CD",
     github: "https://github.com/akshayshinde3/Board-game-Azurepipeline",
-    dashboard: "#",
-    member: [
-      {
-        name: "Akshay Shinde",
-        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
-        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
-        github: "https://github.com/akshayshinde3",
-      },
-    ],
-  },
-  {
-    id: 16,
-    title:
-      "Azure DevOps Full CI/CD Pipeline with AKS",
-    date: "July 2024",
-    ascdetails: [
-      {
-        name: "DevOps Shacks",
-        img: "https://d502jbuhuh9wk.cloudfront.net/logos/64b773fee4b04146dfa907bd.png?v=9",
-      },
-    ],
-    description:
-      "SonarQube: Implemented for code quality and security analysis.",
-    description2:
-      "Docker & Trivy: Used for container building, pushing, and vulnerability scanning.",
-    description3:
-      "Azure Artifacts & OWASP: Managed packages and adhered to security best practices, enhancing the overall robustness of the CI/CD pipeline.",
-
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Azure%20with%20AKS.gif?alt=media&token=2e7dba60-f4aa-41cb-aa0d-df45ade3bec8",
-    tags: ["Microsoft Azure"],
-    category: "Microsoft Azure",
-    github: "https://github.com/akshayshinde3/E-kart-maven-CI",
     dashboard: "#",
     member: [
       {
@@ -472,41 +384,8 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Github%20Action%20-%20Copy.gif?alt=media&token=c121fe1c-5398-448d-94d5-dff7900e811a",
     tags: ["GitHub Action"],
-    category: "GitHub Action",
+    category: "CI/CD",
     github: "https://github.com/akshayshinde3/node-todo-web-app",
-    dashboard: "#",
-    member: [
-      {
-        name: "Akshay Shinde",
-        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
-        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
-        github: "https://github.com/akshayshinde3",
-      },
-    ],
-  },
-  {
-    id: 18,
-    title:
-      "Accelerating Deployment with GitHub Actions: 80% Reduction in Process Time",
-    date: "Aug 2024",
-    ascdetails: [
-      {
-        name: "DevOps Shacks",
-        img: "https://d502jbuhuh9wk.cloudfront.net/logos/64b773fee4b04146dfa907bd.png?v=9",
-      },
-    ],
-    description:
-      "Process Optimization: Reduced deployment time by 80% while maintaining high accuracy.",
-    description2:
-      "GitHub Actions: Leveraged for streamlined CI/CD automation, reducing errors and boosting efficiency.",
-    description3:
-      "Focus on Efficiency: Committed to minimizing time and errors in every project deployment.",
-
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Github%20Action.gif?alt=media&token=b2253923-6799-47a3-9ea0-997c8641537e",
-    tags: ["GitHub Action"],
-    category: "GitHub Action",
-    github: "https://github.com/akshayshinde3/DevOps-Assessment-Gitaction",
     dashboard: "#",
     member: [
       {
@@ -538,7 +417,7 @@ export const projects = [
     image:
       "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Monitoring.gif?alt=media&token=fcdb8f5f-a195-4935-bb80-492f1062d932",
     tags: ["Grafana"],
-    category: "Grafana",
+    category: "Cloud Automation & Monitoring",
     github: "https://github.com/akshayshinde3/k8s-kind-voting-app.git",
     dashboard: "#",
     member: [
