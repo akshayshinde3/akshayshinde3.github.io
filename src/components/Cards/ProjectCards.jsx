@@ -173,7 +173,6 @@ const ProjectCards = ({ project, setOpenModal }) => {
           ))}
         </Members>
       )}
-      {/* Removed the associations section */}
     </Card>
   );
 };

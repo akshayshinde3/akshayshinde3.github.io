@@ -88,18 +88,18 @@ const HeroSection = () => {
                 <Tilt options={{ max: 25, scale: 1.05 }}>
                   <FloatingImage
                     initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                    animate={{
-                      opacity: 1,
+                    animate={{ 
+                      opacity: 1, 
                       scale: 1,
-                      y: 0,
+                      y: 0 
                     }}
                     transition={{
                       duration: 0.8,
                       ease: "easeOut",
                     }}
                   >
-                    <Img
-                      src={bioData.image}
+                    <Img 
+                      src={bioData.Image} 
                       alt={bioData.name}
                       loading="lazy"
                     />

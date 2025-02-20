@@ -111,18 +111,12 @@ const ToggleButtonGroup = styled.div`
   color: ${({ theme }) => theme.primary};
   font-size: 16px;
   border-radius: 16px;
-  padding: 8px 16px; // Increased horizontal padding
+  padding: 8px;
   margin: 28px auto;
-  max-width: 800px; // Increased max-width
+  max-width: 800px;
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  overflow-x: auto; // Add horizontal scroll if needed
-  scrollbar-width: none; // Hide scrollbar for Firefox
-  -ms-overflow-style: none; // Hide scrollbar for IE/Edge
-  &::-webkit-scrollbar {
-    display: none; // Hide scrollbar for Chrome/Safari
-  }
 
   @media (max-width: 768px) {
     width: 90%;
@@ -261,8 +255,6 @@ const ToggleButton = styled(motion.button)`
   overflow: hidden;
   transition: all 0.3s ease;
   white-space: nowrap;
-  min-width: max-content; // Ensure text doesn't wrap
-  flex-shrink: 0; // Prevent button from shrinking
 
   @media (max-width: 768px) {
     padding: 8px 16px;
@@ -275,11 +267,8 @@ const ToggleButton = styled(motion.button)`
 // Update the Divider styling
 const Divider = styled.div`
   width: 1.5px;
-  height: 24px; // Fixed height
-  background: ${({ theme }) =>
-    theme.primary + "40"}; // Made slightly transparent
+  background: ${({ theme }) => theme.primary};
   flex-shrink: 0;
-  margin: 0 4px; // Added margin
 
   @media (max-width: 768px) {
     height: 20px;
