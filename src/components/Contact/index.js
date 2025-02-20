@@ -1,7 +1,9 @@
-import React, { useRef, useState } from "react";
-import styled from "styled-components";
-import emailjs from "@emailjs/browser";
-import { Snackbar, SnackbarContent } from "@mui/material";
+import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
+import { Snackbar, SnackbarContent } from '@mui/material';
+import { supabase } from '../../supabaseClient';
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from './emailConfig';
 
 const Container = styled.div`
   display: flex;
@@ -106,21 +108,9 @@ const ContactButton = styled.input`
   text-decoration: none;
   text-align: center;
   background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
@@ -134,33 +124,43 @@ const Contact = () => {
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const formRef = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_je4mc2e",
-        "template_axl5wdj",
+  
+    const formData = new FormData(formRef.current);
+    const data = {
+      email: formData.get('from_email'),
+      name: formData.get('from_name'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+  
+    try {
+      // Store data in Supabase
+      const { error } = await supabase.from('contacts').insert([data]);
+      if (error) throw error;
+  
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "FIGeHQ6uR0u2hoGIV"
-      )
-      .then(
-        (result) => {
-          setOpenSnackbar(true);
-          formRef.current.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
+        EMAILJS_USER_ID
       );
+  
+      setOpenSnackbar(true);
+      formRef.current.reset();
+    } catch (err) {
+      console.error('Error:', err.message);
+    }
   };
+  
 
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
-        <Desc>
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
+        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={formRef} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />

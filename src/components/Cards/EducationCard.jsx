@@ -167,7 +167,7 @@ const EducationCard = ({ education }) => {
         {education.grade}
       </Grade>
       <Description>
-        <Span>{education.desc}</Span>
+        <Span>{education.description}</Span>
       </Description>
     </VerticalTimelineElement>
   );

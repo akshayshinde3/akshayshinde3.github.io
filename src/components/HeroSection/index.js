@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../../supabaseClient";
 import HeroBgAnimation from "../HeroBgAnimation";
 import {
   HeroContainer,
@@ -11,13 +12,10 @@ import {
   Title,
   Span,
   SubTitle,
-  SocialMediaIcons,
-  SocialMediaIcon,
   ResumeButton,
+  FloatingImage,
 } from "./HeroStyle";
-import HeroImg from "../../images/Hero.jpg";
 import Typewriter from "typewriter-effect";
-import { Bio } from "../../data/constants";
 import { motion } from "framer-motion";
 import {
   headContainerAnimation,
@@ -28,6 +26,27 @@ import { Tilt } from "react-tilt";
 import StarCanvas from "../canvas/Stars";
 
 const HeroSection = () => {
+  const [bioData, setBioData] = useState({
+    name: "",
+    roles: [],
+    description: "",
+    resume: "",
+    Image: "", // Add image_url to store the fetched image URL
+  });
+
+  useEffect(() => {
+    const fetchBioData = async () => {
+      const { data, error } = await supabase.from("bio").select("*").single(); // Fetch a single record
+      if (error) {
+        console.error("Error fetching bio data:", error);
+      } else {
+        setBioData(data);
+      }
+    };
+
+    fetchBioData();
+  }, []);
+
   return (
     <div id="about">
       <HeroContainer>
@@ -41,13 +60,13 @@ const HeroSection = () => {
             <HeroLeftContainer>
               <motion.div {...headTextAnimation}>
                 <Title>
-                  Hi, I am <br /> {Bio.name}
+                  Hi, I am <br /> {bioData.name}
                 </Title>
                 <TextLoop>
                   <Span>
                     <Typewriter
                       options={{
-                        strings: Bio.roles,
+                        strings: bioData.roles,
                         autoStart: true,
                         loop: true,
                       }}
@@ -57,17 +76,34 @@ const HeroSection = () => {
               </motion.div>
 
               <motion.div {...headContentAnimation}>
-                <SubTitle>{Bio.description}</SubTitle>
+                <SubTitle>{bioData.description}</SubTitle>
               </motion.div>
 
-              <ResumeButton href={Bio.resume} target="_blank">
+              <ResumeButton href={bioData.resume} target="_blank">
                 Check Resume
               </ResumeButton>
             </HeroLeftContainer>
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
-                <Tilt>
-                  <Img src={HeroImg} alt="Akshay Shinde" />
+                <Tilt options={{ max: 25, scale: 1.05 }}>
+                  <FloatingImage
+                    initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      ease: "easeOut",
+                    }}
+                  >
+                    <Img
+                      src={bioData.image}
+                      alt={bioData.name}
+                      loading="lazy"
+                    />
+                  </FloatingImage>
                 </Tilt>
               </motion.div>
             </HeroRightContainer>

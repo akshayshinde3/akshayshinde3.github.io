@@ -72,7 +72,7 @@ const Image = styled.img`
 `;
 
 const Label = styled.div`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 6px;
@@ -143,6 +143,14 @@ const MemberImage = styled.img`
   border-radius: 50%;
   margin-bottom: 4px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border: 2px solid ${({ theme }) => theme.primary};
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  }
+
   @media only screen and (max-width: 600px) {
     width: 32px;
     height: 32px;
@@ -155,6 +163,14 @@ const AssociationImage = styled.img`
   border-radius: 50%;
   margin-bottom: 4px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border: 2px solid ${({ theme }) => theme.text_secondary};
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  }
+
   @media only screen and (max-width: 600px) {
     width: 32px;
     height: 32px;
@@ -218,6 +234,12 @@ const Button = styled.a`
 
 const index = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+  const placeholderImage = "https://via.placeholder.com/150";
+  
+  const handleImageError = (e) => {
+    e.target.src = placeholderImage;
+  };
+
   return (
     <Modal
       open={true}
@@ -234,16 +256,20 @@ const index = ({ openModal, setOpenModal }) => {
             }}
             onClick={() => setOpenModal({ state: false, project: null })}
           />
-          <Image src={project?.image} />
+          <Image src={project?.image || placeholderImage} onError={handleImageError} />
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
-          {project.ascdetails && (
+          {project.associations?.length > 0 && (
             <>
+              <Label>Associated With</Label>
               <Associations>
-                {project?.ascdetails.map((ascdetails) => (
-                  <Association>
-                    <AssociationImage src={ascdetails.img} />
-                    <AssociationName> <h5>Asscociated With</h5>   {ascdetails.name}</AssociationName>
+                {project.associations.map((assoc) => (
+                  <Association key={assoc.id}>
+                    <AssociationImage 
+                      src={assoc.img || placeholderImage} 
+                      onError={handleImageError}
+                    />
+                    <AssociationName>{assoc.name}</AssociationName>
                   </Association>
                 ))}
               </Associations>
@@ -265,28 +291,35 @@ const index = ({ openModal, setOpenModal }) => {
             <br />
             {project?.description3}
           </Desc>
-          {project.member && (
+          {project.members?.length > 0 && (
             <>
-              <Label>Members</Label>
+              <Label>Team Members</Label>
               <Members>
-                {project?.member.map((member) => (
-                  <Member>
-                    <MemberImage src={member.img} />
+                {project.members.map((member) => (
+                  <Member key={member.id}>
+                    <MemberImage 
+                      src={member.img || placeholderImage} 
+                      onError={handleImageError}
+                    />
                     <MemberName>{member.name}</MemberName>
-                    <a
-                      href={member.github}
-                      target="new"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      <GitHub />
-                    </a>
-                    <a
-                      href={member.linkedin}
-                      target="new"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      <LinkedIn />
-                    </a>
+                    {member.github && (
+                      <a
+                        href={member.github}
+                        target="new"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        <GitHub />
+                      </a>
+                    )}
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="new"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        <LinkedIn />
+                      </a>
+                    )}
                   </Member>
                 ))}
               </Members>
@@ -297,7 +330,7 @@ const index = ({ openModal, setOpenModal }) => {
               View on Github
             </Button>
             <Button href={project?.dashboard} target="new">
-              View Web App
+              View Live Dashboard
             </Button>
           </ButtonGroup>
         </Wrapper>

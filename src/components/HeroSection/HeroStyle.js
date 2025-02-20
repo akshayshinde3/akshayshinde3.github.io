@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
@@ -99,11 +100,13 @@ export const Img = styled.img`
   max-width: 400px;
   max-height: 400px;
   border-radius: 50%;
+  object-fit: cover;
   border: 2px solid ${({ theme }) => theme.primary};
+  transition: all 0.3s ease;
 
   @media (max-width: 768px) {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 300px;
+    max-height: 300px;
   }
 
   @media (max-width: 640px) {
@@ -200,4 +203,25 @@ export const ResumeButton = styled.a`
         font-size: 18px;
     } 
 
+`;
+
+export const FloatingImage = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+  filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.25));
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 `;

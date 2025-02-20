@@ -103,3 +103,49 @@ export const CardContainer = styled.div`
     //     grid-template-columns: repeat(1, 1fr);
     // }
 `;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 180px;
+  background-color: ${({ theme }) => theme.white};
+  border-radius: 10px;
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+`;
+
+export const Tags = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+`;
+
+export const Tag = styled.span`
+  font-size: 12px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.primary + 15};
+  padding: 2px 8px;
+  border-radius: 10px;
+`;
+
+export const Details = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 0px 2px;
+`;
+
+export const Description = styled.div`
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary + 99};
+  overflow: hidden;
+  margin-top: 8px;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+`;
