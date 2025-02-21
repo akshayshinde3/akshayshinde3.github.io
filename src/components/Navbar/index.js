@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { supabase } from "../../supabaseClient";
 import {
   Nav,
   NavLink,
@@ -13,27 +14,45 @@ import {
   MobileNavLogo,
   MobileLink,
 } from "./NavbarStyledComponent";
-import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
-import { Bio } from "../../data/constants";
 import { Close, CloseRounded } from "@mui/icons-material";
 import { useTheme } from "styled-components";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [navData, setNavData] = useState(null);
   const theme = useTheme();
+
+  useEffect(() => {
+    fetchNavData();
+  }, []);
+
+  const fetchNavData = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("bio")
+        .select("name, github")
+        .single();
+
+      if (error) {
+        console.error("Error fetching nav data:", error);
+        return;
+      }
+
+      setNavData(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo>
-          <h3 style={{ color: `white` }}>Akshay Shinde</h3>
+          <h3 style={{ color: `white` }}>{navData?.name || "Loading..."}</h3>
         </NavLogo>
         <MobileIcon>
-          <FaBars
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-          />
+          <FaBars onClick={() => setIsOpen(!isOpen)} />
         </MobileIcon>
         <NavItems>
           <NavLink href="/about">About</NavLink>
@@ -43,7 +62,7 @@ const Navbar = () => {
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">
+          <GitHubButton href={navData?.github} target="_blank">
             Github Profile
           </GitHubButton>
         </ButtonContainer>
@@ -96,7 +115,7 @@ const Navbar = () => {
                 color: "white",
                 width: "max-content",
               }}
-              href={Bio.github}
+              href={navData?.github_url}
               target="_blank"
             >
               Github Profile

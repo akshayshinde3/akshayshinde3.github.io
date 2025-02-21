@@ -1,15 +1,20 @@
 export const Bio = {
-  name: "Sandesh Arsud",
-  roles: ["Data Science Enthusiast", "Engineer", "Tech Enthusiast"],
+  name: "Akshay Shinde",
+  roles: [
+    "Engineer",
+    "DevOps Engineer",
+    // "Tech Enthusiast",
+    // "Programmer",
+  ],
   description:
-    "a passionate Data Science enthusiast dedicated to leveraging data-driven decision-making and delivering impactful results through my expertise in data analysis and visualization.",
-  github: "https://github.com/arsudsandesh97",
+    "Hello, I'm Akshay, a DevOps engineer with a flair for streamlining operations through the magic of automation, continuous integration, and deployment. Over the past year, I've honed my skills and expertise in the dynamic fields of DevOps and cloud computing. My journey has been marked by hands-on experience and a deep dive into the world of cutting-edge technologies.",
+  github: "https://github.com/akshayshinde3",
   resume:
-    "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/Resume%2FSandesh_Resume.pdf?alt=media&token=af5c0446-2194-4751-802f-4c4dd18dfdfa",
-  linkedin: "https://www.linkedin.com/in/sandesharsud/",
-  twitter: "https://twitter.com/sandesharsud",
-  insta: "https://www.instagram.com/sandesh_arsud/",
-  // facebook: "",
+    "https://drive.google.com/file/d/1FkehjvxD4GVsTNXAhmhAqj2xJqgqCuXa/view",
+  linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+  // twitter: "#",
+  // insta: "#",
+  // facebook: "#",
 };
 
 export const skills = [
@@ -22,91 +27,93 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
       {
-        name: "SQL",
+        name: "HashiCorp",
+        image: "https://www.vectorlogo.zone/logos/hashicorp/hashicorp-icon.svg",
+      },
+      {
+        name: "Java",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
       },
     ],
   },
   {
-    title: "Data Manipulation",
+    title: "Cloud Computing",
     skills: [
       {
-        name: "Pandas",
-        image: "https://pandas.pydata.org/static/img/pandas.svg",
+        name: "AWS (Amazon Web Services)",
+        image:
+          "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
       },
       {
-        name: "Numpy",
+        name: "GCP (Google Cloud Platform)",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg",
+          "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg",
       },
       {
-        name: "Power Query Editor",
+        name: " Microsoft Azure",
         image:
-          "https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png",
+          "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg",
       },
+
     ],
   },
   {
-    title: "Data Analysis And Visualization Tools",
+    title: "Containerization & Orchestration",
     skills: [
       {
-        name: "Microsoft Excel",
+        name: "Docker",
         image:
-          "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Blade005_3-Up%20Icon%20Card_Excel_24x22_2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=32&hei=32&qlt=100&fmt=png-alpha&fit=constrain",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
       },
       {
-        name: "Microsoft Power BI",
+        name: "Kubernetes",
         image:
-          "https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png",
-      },
-      {
-        name: "Tableau",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAQlBMVEVHcExwmaVwmaVlgJtwmaXrkShwmaVah5vrkShah5vodizodizodixbZZFbZZFbZZFbZZHHIDYeRH7HIDYeRH4eRH76/o4UAAAAFXRSTlMAEPw7VXizePb2NP3ws1P8EHh49vNnJOVcAAAAr0lEQVR4AX3Q0RaFEBCF4Q1SCKT3f9WTuaE1R99FN/9iTHgRAmtSYkVpKbUCYwyATT42ANZitu/zyeNgccyco9mJodfCHsSyCIzIrnUOWM70nkdapQsBeK+iNgVgRKJOhU5LzWNMEYCQnYDzIQRPH4ecuvwZv6/9fhApZY61YnZd809o7V90jsVykQJSW7vv1iqLOY/Irk1pOVPFlKLikVY50+Nkq5BxkhkzV3LG7AcvlAr9NZNe3AAAAABJRU5ErkJggg==",
+          "https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg",
       },
     ],
   },
   {
-    title: "Platforms And Tools",
+    title: "Continuous Integration & Continuous Deployment (CI/CD)",
+    skills: [
+      {
+        name: "Jenkins",
+        image: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg",
+      },
+      {
+        name: "GitHub Action",
+        image: "https://www.vectorlogo.zone/logos/github/github-icon.svg",
+      },
+      {
+        name: "GitLab",
+        image: "https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Infrastructure as Code (IaC)",
+    skills: [
+      {
+        name: "Terraform",
+        image:
+          "https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg",
+      },
+      {
+        name: "Ansible",
+        image: "https://www.vectorlogo.zone/logos/ansible/ansible-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Version Control",
     skills: [
       {
         name: "Git",
-        image: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+        image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
       },
       {
         name: "GitHub",
-        image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-      },
-      {
-        name: "Google Colab",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAclBMVEVHcEzxjQX5qQDzlgT0lwLzlwT5qgD5qwD5qwD5qwD5qwD5qgDwjAX5qwD5qAD5qwD5qwD5qwD0mQPregj3pQHwjwbocQrocQruhgf5qgDwjAbocQrocQrpcQr5qwDocQrrfAjpcgnpcQnpcgnwjQbwjAZUryHnAAAAJnRSTlMADjMmBhyS1fDnw2wV4K9M+P8+l/6vdfb8Xff/hN176DO+aVPn4zRFwdUAAAEASURBVHgBzVEFtsMwDEuZmRtO/r//FWfPHZ5gKvlJjUzsRxGEYRRTGEdhmLxJYZrleVFWNfxVlUWeN213SXXaD4QsGbPhQhvdtWl+El0xPDAv6L1u+zwUZZn1zVEi3TdNPswnFzGLJOd72yVJqKoUtUx149GenGvDVs65NVRmiVqHVUcWaMHgvTmqbCzAU1HsNjjDwFWORBz5MDRX7DX4fotZdIkb8N+2BXUfTFjKd0F9WqPmNNDrs5WaWpn/Jj/6CTUZMTgKQ2jKloaA/UmU+LaCRfI+vn/+xFQzVJ+DbyJjOWETqCHGtMGVqQRK8YvU2grqiFDDsoNHnCQx+03cADN4Gl+iZEmCAAAAAElFTkSuQmCC",
-      },
-      {
-        name: "Jupyter Notebook",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAKlBMVEVHcEzzdybzdybzdybzdybzdybzdybzdyb0dybzdybzdybzdybzdybzdyad84JKAAAADnRSTlMAIXa63PRA/xaEWS+eWvdOIucAAABzSURBVHgBYwABRmXXECMBBihgcy8HgpIEKNe8HAyKIbz2ciioAPE4gOKzsretBKppAHJZy09DVO0pDwCSxyfAjOSsAVoSwQAHrQIMTAxIQIFhUAI0R6J5AdWDaN6HBs7c7G03QYED1gEPOtSAxQx2tEgBAEW4LtDPbu3PAAAAAElFTkSuQmCC",
-      },
-      {
-        name: "VS Code",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-      },
-      {
-        name: "PostgreSQL",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJFBMVEUAAAAAAAA/Pz9/f3+/v7////+///9/v79/f78/f78/f3+/v/9q2MrtAAAAAXRSTlMAQObYZgAAAUhJREFUeAF8kTVCBDEUQAMcAG9w63FvkGBDg1uHWwmsTIWsDiU+7fqbCrfLkeD+4y/JV6EkW420bJFdrjdqWym7K3IapJyQC3VZCuT1hUOb496UbwxctepBH5B40NMqyCyRbgABAPw20RqRZwF3ACTXoFPkA8wAgIRhDUgYABB7exH1um3gsMdMvoJ19wqkJjfNhFJqg2Meb0LC7bOiZSLDgqhFXGty7FiWyDA0IAapNcf2KccewLE1YDVqdSnXZ96BLxruVKAZDXxA/NBXJoSogqhJv3b9cVOHrx2ZZgbg+kIoyTVha9MAOOrMznrROtc0ATA4Nj6stRKvaHcMSM2wXyuEKLQupXlkQHJ8vCtLZ1mWS9ltKrCjVTyXIaci1wIV6ru8xFj2LzAhnvUJ6GrEvoA12BOfpY/k0xJRBERSQgRQBBihjgIAWSq3/j+GC6MAAAAASUVORK5CYII=",
-      },
-      {
-        name: "Pyhcarm",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/1200px-PyCharm_Icon.svg.png",
-      },
-      {
-        name: "Figma",
-        image: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
+        image: "https://www.vectorlogo.zone/logos/github/github-icon.svg",
       },
     ],
   },
@@ -115,158 +122,312 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/sf.jpeg?alt=media&token=f6c04933-c72d-4843-a2f2-8c393a29893f",
-    role: "Data Science And Business Analytics Intern",
-    company: "THE SPARKS FOUNDATION",
-    date: "February 2023 - March 2023",
-    desc: "Optimized data-driven decision-making with exceptional data cleaning and visualization skills. Executed exploratory analysis on 756 IPL cricket match records using Python during The Sparks Foundation internship",
-    desc2:
-      "Developed an interactive Superstore sales dashboard, identifying corporate as the highest selling segment 48% of total sales and consumer as the most profitable 47% of total profit.",
-    desc3:
-      "Evaluated top categories, with office supplies leading in both sales 44% and profit 54%, utilizing Power BI for data visualization.",
-    skills: ["Exploratory Data Analysis", "Power Bi", "Python"],
-    doc: "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/Sparks%20Foundation%20Internship%20Certificate.jpeg?alt=media&token=c1633754-a899-4b67-85c7-4a067abe224d",
+    img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Mountreach%20Solution%20Pvt.%20Ltd..jpeg?alt=media&token=a55887ec-5f41-4431-a84e-878981b3df2a",
+    role: "DevOps Intern",
+    company: "Mountreach Solution Pvt. Ltd.",
+    date: "Feb-2024 to July-2024",
+    desc: "Implemented GitHub Actions to automate the development workflow, leading to faster delivery and fewer errors.",
+    desc2: "Developed workflows to automate tasks in GitHub Actions, including developing, testing, packaging, and deploying applications.",
+    desc3: "Utilized AWS ECS for scalable and efficient containerized application deployment, with easy connection into CI/CD pipelines.",
+    skills: ["AWS", "Docker", "AWS ECS","Github Actions"],
+    doc: "",
   },
   {
     id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/almabetter.png?alt=media&token=f177331b-4528-40a0-9f0e-6c59dadf1db8",
-    role: "Data Science Trainee",
-    company: "Almabetter",
-    date: "October 2022 - October 2023",
-    desc: "Conducted thorough Exploratory Data Analysis (EDA) on global terrorism data, collaborating with team members to extract actionable insights and patterns.",
-    desc2:
-      "Leveraged Python and SQL to manipulate and analyze datasets, facilitating informed decision-making processes.",
-    desc3:
-      "Mastered advanced data visualization and manipulation techniques using a comprehensive toolkit including Microsoft Excel, NumPy, Pandas, and Matplotlib",
-
-    skills: ["Python", "SQL", "Exploratory Data Analysis", "Microsoft Excel"],
+    img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/mortars%20pvt%20ltd.jpg?alt=media&token=e22d2415-c7c7-435b-95d2-d6a7a0f74be0",
+    role: "DevOps Intern",
+    company: "MORTARS TECHNOLOGIES PRIVATE LIMITED",
+    date: "Oct-2024 – Jan-2025",
+    desc: "Deployed a two-tier Java application on Amazon EKS with Kubernetes, leveraging GitHub Actions to automate CI/CD pipelines, container management, and deployment configurations",
+    desc2: "Configured Kubernetes resources, Docker containers, and secure connections between application and MySQL database, with integrated code quality and security scans.       ",
+    skills: ["Kubernetes", "Github Action", "Docker", "Sonarcube","Trivy","AWS"],
+    doc: "",
   },
 ];
 
 export const education = [
   {
     id: 0,
-    img: "https://media.licdn.com/dms/image/C510BAQHiOK4s2d-KWQ/company-logo_200_200/0/1630612940758?e=2147483647&v=beta&t=P3UXsjl8l0k4xTz1XwRMIIdK9zlZw_jy9djqFDjqXeU",
-    school: "INTERNATIONAL CENTER OF EXCELLENCE IN ENGINEERING AND MANAGEMENT",
-    date: "Oct 2021 - Present",
-    grade: "74.00%",
-    desc: "I am currently pursuing a Bachelor's degree in Electrical and Electronics Engineering at INTERNATIONAL CENTER OF EXCELLENCE IN ENGINEERING AND MANAGEMENT.",
-    degree:
-      "Bachelor of Engineering - BE, Electrical and Electronics Engineering",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROJa9GcfKeBqcMmCMhTR9V5yZyNlEzX6V6lw&usqp=CAU",
+    school: "SMT.KASHIBAI NAVLE COLLEGE OF ENGINEERING",
+    date: "Dec 2021 - Present",
+    grade: "7.70 CGPA",
+    desc: "I am currently pursuing a Bachelor's degree in Mechanical Engineering at SMT.KASHIBAI NAVLE COLLEGE OF ENGINEERING,Pune",
+    degree: "Bachelor of Mechanical Engineering",
   },
   {
     id: 1,
-    img: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3NzczNzc3Nzc3Nzc3Nzc3NzY3Nzc3Ny03Nzc3NzY3OC8vNzc3Nf/AABEIAB8AIAMBEQACEQEDEQH/xAAaAAACAgMAAAAAAAAAAAAAAAAEBwMGAAEF/8QALhAAAQMCBQIEBQUAAAAAAAAAAQIDEQQFAAYSITETQRQjUWEVMkKxwSJxgZGh/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgMAAQT/xAAmEQABBAIBBAAHAAAAAAAAAAACAAEDERIxITJxofAEEyJBUYGR/9oADAMBAAIRAxEAPwBnZ8vtZl+xmqt9J131rDYWoShmfqV9h7kYXKeA2tHw0QyyYk9MlbeM3ZhzRaGrOKUKdGlTrtKlZcdIPOlPyjief44wnMjHnha2GCCTIbKu1N3d32sy5m295QoKi1Loeo46pTjZq+olbaiAJg8p242774jGQDe/fwobQzzMz/T/ACn7O3Fpn5BzDV5is6nq+kLL7K9CnEpIbd90/kdsNikzG1l+KhGE8Re2XEztVXG4eJtyUI6DbgKAkQpUDaTPqZ/rCpCcixfSOMcAzDqrhFWtDeWssUfw9LXjapOtZcB8xUHkjcafxHecHkwix3vyssts/wAttN75QtfozPlyqTX9JVXTMJdbW3MBR9J7HiMG8gkGTbb3ylxATk8Zaf2/1tayPVXG3ilt60IDLjkrSvdSCRvBBjkThMZOJYtpbpRzDM+quVdLlSN1DYHTGrVOqMPMbZZgKnVcvLlutKGkXZtDzCgstoWhZ08agCkHmRsfXAjG78VaqWYB5J6UdndtF0WWbUGWQG0qWw2lc6QREkgCASNhiFG7falIp4y6Xt1Z7bSN07ZAbGrVOqMEA0ysyt1FdA8XPJVpJCYJO0bztPPGLdQdIen66QrxDmv9J0hMiDAg8/v/AJikShHxDTpLlP230rk7b/VHPtxicq+Eda+v1PPKSQkyUSAfljYk7zqxbIC0v//Z",
-    school: "Nath Polytechnic ",
-    date: "Apr 2017 - Apr 2021",
-    grade: "75.00%",
-    desc: "I have completed My Diploma In Electrical Engineering at Nath Polytechnic",
-    degree: "Diploma In Electrical Engineering",
+    img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABBVBMVEX////49uzqikny7N/v4c/vkmHumWTr2cb///3///zmxqPull3wmGPpvpn7///p07ztiUTqllruiErmyar//v/8/PPxj1LjvJjv4tbop3nuk1LqkFbnpG/sjFjpuJTsnGnxm2/vnGrqt43pomrxmGbonGPlmFflsIbaijjz7dr4///chjnmv47kqXPmk0vFxcva2Nypqbrg4Ofbn1/p6eegna2QjJ2YlKmNhp7r7ObY2NrR0cwwJVRMQ2ePiqS7ur0AADx5c44AAEHDvco+NV5eWH2rqL5rZH2DfJdybJIKAGaEfoyloat6dJSbl7AOAE4fE0rmbwDdaADmfyTl0Kji07DiwI7Q1HqpAAACdElEQVR4AX1ShYKjMBQcqliTw1aASpD2riuQNpR1d8/a/3/K0XPrTTyZPMfvUGq1Ov6HRrPVXvyqQtMNs0M0dSGBfrAs2yHuIoLq6UtLy4q6SIKLlVU/CNuLNRCnaxiBToB/C2n0+saAGf2oMaf8/RwHjLX6SSsZGOnvaiqBqtsLmGkNe2kYpX7CghGBRn4yiBea/SD6CPJJwXhtPWBJPNZ+NW+j1d9sEDXLeT5xVdRrjMW/hIPQbjKceoIXxYyXZQ5lIx009V80WH1fgdjiubItxLbQJlAsFng/4tM2gmUIZWd3Z282289EdsDRMQxKvvqikl6zv+zyw+zw6HhWHh8d7mbl9nrYir4QPIeQuEnB+Q4/EcgFdk5ORZaBdvsgjoaGr48D30OZiZMdVAQV+Z7IC2h+MHaW2qgvdWngN1CIs3Nk6sWp2MX+pZi5DSuoHuogVpO2UuoW4qqEe31zc65hdrt9JWhqUdPSQEYJM3pwS3F3Bc07uNaA40NtS2DZTJNVAjgma/WAe3F5BvCbmweo+zMhXHQSZuoEasNgbJWoAvljATGZTFA8TQCCueg2AeYEQ9cAN3ucqdVy+5h/qb60z4wGAGoy5vcIALFz9rS/v3eWi4ow7viMtRyAxKaZWB3N8zxNU24Ps1ul2mge9GbTMIdjbEgZTqV8/gopf9nGo2cZ4kW20w35WsF5jXS6Lkdvr/qrs/62KTcCKiVkPB5TOYzWN6bDzVgfypf3cBqOhqMXqaOSj3i0HnXiNE7DNI7TKIorzI/VKYrWoxinBS+L8uCKX0we+Cm/4FVJZZOCV7f84eGCo+1Q6sxRzT9QHb5d08+fQmHNF1ScpQAAAABJRU5ErkJggg==",
+    school: "Government Polytechnic Aurangabad",
+    date: "Apr 2018 - Apr 2021",
+    grade: "82.00%",
+    desc: "I have completed My Diploma In Mechanical Engineering at Government Polytechnic,Aurangabad.",
+    degree: "Diploma In Mechanical Engineering",
   },
 ];
 
 export const projects = [
   {
     id: 9,
-    title: "Walmart Sales Dashboard",
-    // date: "",
-    description:
-      "• Increased profitability by 34% in 2014, generating $251k in profit from a total revenue of $725.46k, achieving the highest profit year-to-date.",
-    description2:
-      "• Led product category optimization, boosting profits in Binders to $16.1k, while maintaining Phones as the top-selling category with 35% of total sales.",
-    description3:
-      "• Maximized seasonal performance, driving December profits to $13.26k, the highest monthly profitability, contributing significantly to overallrevenue.",
-
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/Walmart%20Sales%20Dashboard%202.0.jpg?alt=media&token=08986a7d-3d53-4814-9b70-d2c637ff4739",
-    tags: ["Microsoft Power Bi", "Figma"],
-    category: "Power Bi Dashboard",
-    github: "https://github.com/arsudsandesh97/Walmart-Sales-Dashboard",
-    dashboard: "https://www.novypro.com/project/walmart-sales-dashboard",
-  },
-  // {
-  //   id: 0,
-  //   title: "Netflix Movies & TV Shows Dashboard",
-  //   // date: "",
-  //   description: "Designed a power bi dashboard of Netflix Movies & TV Shows.",
-  //   image:
-  //     "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/Netflix%20Movies%20%26%20TV%20Shows%20Dashboard.gif?alt=media&token=5a7c252b-b344-46af-aced-fa80c5f17e88",
-  //   tags: ["Microsoft Power Bi", "Figma"],
-  //   category: "Power Bi Dashboard",
-  //   github: "https://github.com/arsudsandesh97/Netflix-Movies-TV-Shows-Dashboard",
-  //   dashboard:
-  //     "https://www.novypro.com/project/netflix-movies-and-tv-shows-dashboard",
-  // },
-  {
-    id: 1,
-    title: "Global Superstore Dashboard",
-    // date: "",
-    description:
-      "• Utilized advanced Excel tools such as Pivot Tables, VLOOKUPs, custom formatting, and charts to effectively analyze and present Superstore sales data",
-    description2:
-      "• Discovered technology as the highest selling category (1.4% of total sales), with phones leading the subcategory at $176.8k in sales.",
-    description3:
-      "• Identified 2015 as the most profitable year with $504.2k profit, and office supplies as the category with the highestreturns, totaling 533.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/Global%20Superstore%20Dashboard%20-%20Made%20with%20Clipchamp.gif?alt=media&token=7664c41f-5896-4b7c-b0a9-cd7d79ef3b28",
-    tags: ["Microsoft Excel", "Figma"],
-    category: "Excel Dashboard",
-    github: "https://github.com/arsudsandesh97/global-superstore-report",
-    // dashboard: "",
-  },
-  {
-    id: 2,
-    title: "EDA PROJECT ON GLOBAL TERRORISM ANALYSIS",
-    date: "Nov-2022",
+    title: "DEVSECOPS JENKINS CL/CD PIPELINE FOR A NODE.JS APPLICATION",
+    date: "Mar 2024",
     ascdetails: [
       {
-        name: "Almabetter",
-        img: "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/almabetter.png?alt=media&token=f177331b-4528-40a0-9f0e-6c59dadf1db8",
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
       },
     ],
     description:
-      "• Conducted comprehensive analysis of 47 years of global terrorism data (1970-2017) to unearth key trends.",
+      "• Developed and implemented a Jenkins CI/CD pipeline for a Node.js application,emphasizing DevSecOps principles to enhance automation, integration, and delivery processes",
     description2:
-      "• Analyzed data to pinpoint critical trends, highlighting the peak yearin 2014 and identifying the least active years (2008, 2010, 2011).",
+      "• Integrated key security tools including SonarQube for continuous code quality checks, OWASP for security vulnerability testing, and Trivy for comprehensive Dockerimage scans, ensuring robust application security.",
+    description3:
+      "• This initiative not only honed my expertise in CI/CD pipeline construction and security practices within DevOps but also deepened my understanding of containerization techniques, underscoring a holistic approach to DevSecOps.",
+
     image:
-      "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/EDA%20PROJECT%20ON%20GLOBAL%20TERRORISM%20ANALYSIS.png?alt=media&token=bdd0dcd3-ae27-4448-9d7e-8e7d5444fbd0",
-    tags: ["Python", "Google Colab", "Microsoft Powerpoint", "Microsoft Word"],
-    category: "EDA Using Python",
-    github:
-      "https://github.com/arsudsandesh97/Global_Terrorism_Analysis_Capstone_Project.",
-    // dashboard: "",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/DevSecOps.gif?alt=media&token=c3ad6969-8243-441a-958e-d052521e071d",
+    tags: ["Jenkins"],
+    category: "CI/CD",
+    github: "https://github.com/akshayshinde3/DevSecOps_ToDo_App",
+    dashboard: "#",
     member: [
       {
-        name: "Sandesh Arsud",
-        img: "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/a_photo_of_sandesh%20(19).jpg?alt=media&token=e13992df-c210-46df-ac47-b962754b6005",
-        linkedin: "https://www.linkedin.com/in/sandesharsud/",
-        github: "https://github.com/arsudsandesh97",
-      },
-      {
-        name: "Vishal Pagare",
-        img: "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/pp1.jpg?alt=media&token=a1ac4d5b-548b-424c-9e05-dc7f0077ea36",
-        linkedin: "https://www.linkedin.com/in/vishal-pagare/",
-        github: "https://github.com/vishal120700",
-      },
-      {
-        name: "Sachin Gavande",
-        img: "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/sachin.jpeg?alt=media&token=814b859b-d9e6-4e13-bcbf-769e984a09a6",
-        linkedin: "https://www.linkedin.com/in/sachingavande/",
-        github: "https://github.com/sachingavande4599",
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
       },
     ],
   },
   {
-    id: 3,
-    title: "Atliq Presence Insights",
-    // date: "",
+    id: 9,
+    title:
+      "Innovating with Jenkins Terraform-Ansible Pipeline for Automated Deployment",
+    date: "June 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
     description:
-      "crafted a real-time Power BI Atliq Presence Insights dashboard, leveraging the HR Data Analytics from Codebasics YouTube channel",
+      "AWS EC2 Instance Setup: Launched EC2 instances and configured an S3 bucket for storage solutions.",
+    description2:
+      "Jenkins Configuration: Installed and integrated Jenkins for CI/CD, with all necessary plugins for seamless operation.",
+    description3:
+      "Terraform & Ansible Integration: Utilized Terraform for infrastructure as code and Ansible for dynamic inventory and automated deployment across multiple EC2 instances.",
+
     image:
-      "https://firebasestorage.googleapis.com/v0/b/sandesh-arsud.appspot.com/o/Atliq%20Presence%20Insights.gif?alt=media&token=45c7385d-be1a-4c04-99dd-34f390c2adcd",
-    tags: ["Microsoft Powerbi", "Dax"],
-    category: "Power Bi Dashboard",
-    // github: "",
-    dashboard: "https://www.novypro.com/project/atliq-presence-insights",
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Jenkins%20-%20Copy.gif?alt=media&token=0765b314-e836-4339-bc6a-fd69a451139a",
+    tags: ["Terraform"],
+    category: "Cloud Automation & Monitoring",
+    github: "https://github.com/akshayshinde3/Terraform-Ansible-Project",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },{
+    id: 10,
+    title:
+      "Deployment of a Three-Tier Web Application with DevOps Best Practices",
+    date: "Mar 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
+    description:
+      "IAM and EC2 Setup: Configured IAM user with administrative access and launched an Ubuntu EC2 instance for the deployment environment.",
+    description2:
+      "Tool Installation: Installed AWS CLI, Docker, kubectl, and eksctl on the EC2 instance to manage AWS services and Kubernetes clusters.",
+    description3:
+      "EKS Cluster and Application Deployment: Set up and deployed the application on an EKS cluster using Kubernetes manifests, with AWS Load Balancer Controller for efficient load management.",
+
+    image:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1713970716490/e39fcfed-143b-4972-8d39-651a80ff0dd9.gif?w=1600&h=840&fit=crop&crop=entropy&auto=format,compress&gif-q=60&format=webm",
+    tags: ["Kubernetes"],
+    category: "containerization and orchestration",
+    github: "https://github.com/akshayshinde3/TWSThreeTierAppChallenge",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
   },
+  {
+    id: 11,
+    title:
+      "Automated Deployment of Node.js Application on Serverless AWS ECS Fargate",
+    date: "June 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
+    description:
+      "Serverless Deployment: Leveraged AWS ECS Fargate for serverless application hosting",
+    description2:
+      "Image Repository & Logging: Integrated ECR for container images and CloudWatch for logging",
+    description3:
+      "Secure Configuration: Ensured robust security with carefully configured IAM roles.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Automated%20the%20deployment%20of%20a%20Node%20JS%20Application%20on%20serverless%20AWS%20ECS%20FARGET.gif?alt=media&token=b986c852-d50d-4f76-8289-2112e2a7f268",
+    tags: ["AWS"],
+    category: "Cloud Automation & Monitoring",
+    github: "https://github.com/akshayshinde3/node-todo-Aws_serverless",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  {
+    id: 14,
+    title:
+      "  Developing High-Performance E-Commerce on AWS EKS",
+    date: "June 2024",
+    ascdetails: [
+      {
+        name: "DevOps Shacks",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/64b773fee4b04146dfa907bd.png?v=9",
+      },
+    ],
+    description:
+      "CI/CD Pipelines: Proficient in Jenkins for efficient CI/CD automation.",
+    description2:
+      "AWS EKS: Experienced in orchestrating microservices with AWS EKS.",
+    description3:
+      "Microservices Architecture: Advocate for microservices to enhance modularity, resilience, and scalability.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/microservice.gif?alt=media&token=a654be9e-c738-4e48-a4f9-7865991dde79",
+    tags: ["Kubernetes"],
+    category: "containerization and orchestration",
+    github: "https://github.com/akshayshinde3/MicroService",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  {
+    id: 15,
+    title:
+      "  Streamlining Boardgame Project with Azure CI/CD",
+    date: "July 2024",
+    ascdetails: [
+      {
+        name: "DevOps Shacks",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/64b773fee4b04146dfa907bd.png?v=9",
+      },
+    ],
+    description:
+      "Automated CI/CD Pipeline: Streamlined build, test, and deployment processes using Azure, ensuring faster and more reliable releases.",
+    description2:
+      "Containerization & Orchestration: Utilized Docker and Kubernetes for consistent, scalable, and efficient management of applications.",
+    description3:
+      "Security & Code Quality: Integrated Trivy and SonarQube for early vulnerability detection and adherence to coding standards.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Azure%20CICD%20-%20Copy.gif?alt=media&token=adb6e581-6b60-4249-84fe-ac9e0798a872",
+    tags: ["Microsoft Azure"],
+    category: "CI/CD",
+    github: "https://github.com/akshayshinde3/Board-game-Azurepipeline",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  {
+    id: 17,
+    title:
+      "Deploying a Node.js App with GitHub Actions and AWS ECS",
+    date: "Aug 2024",
+    ascdetails: [
+      {
+        name: "DevOps Shacks",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/64b773fee4b04146dfa907bd.png?v=9",
+      },
+    ],
+    description:
+      "CI/CD Benefits: Faster delivery, improved observability, smaller code changes, easier rollbacks, and cost reduction.",
+    description2:
+      "GitHub Actions: A powerful CI/CD platform that automates your development workflow, allowing you to build, test, and deploy code seamlessly.",
+    description3:
+      "GitHub Actions Workflow: Configurable processes that are triggered by GitHub events to automate tasks like building, testing, packaging, and deploying your project.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Github%20Action%20-%20Copy.gif?alt=media&token=c121fe1c-5398-448d-94d5-dff7900e811a",
+    tags: ["GitHub Action"],
+    category: "CI/CD",
+    github: "https://github.com/akshayshinde3/node-todo-web-app",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  {
+    id: 19,
+    title:
+      "Automated Deployment of Scalable Applications on AWS EC2 with Kubernetes and Argo CD",
+    date: "Sept 2024",
+    ascdetails: [
+      {
+        name: "Train With Shubham",
+        img: "https://d502jbuhuh9wk.cloudfront.net/logos/62cd128e0cf2e6a1694683bb.png?v=19",
+      },
+    ],
+    description:
+      "AWS EC2: Infrastructure hosting for Kubernetes clusters.",
+    description2:
+      "Kubernetes Dashboard: User-friendly interface for managing containerized applications.",
+    description3:
+      "Argo CD: Continuous Delivery tool for automated application deployments.",
+
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Monitoring.gif?alt=media&token=fcdb8f5f-a195-4935-bb80-492f1062d932",
+    tags: ["Grafana"],
+    category: "Cloud Automation & Monitoring",
+    github: "https://github.com/akshayshinde3/k8s-kind-voting-app.git",
+    dashboard: "#",
+    member: [
+      {
+        name: "Akshay Shinde",
+        img: "https://firebasestorage.googleapis.com/v0/b/akshay-92a30.appspot.com/o/Hero.jpg?alt=media&token=48d2f15f-6bb2-46bb-9d73-0489df989e8d",
+        linkedin: "https://www.linkedin.com/in/akshay-shinde99/",
+        github: "https://github.com/akshayshinde3",
+      },
+    ],
+  },
+  
 ];
