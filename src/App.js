@@ -1,8 +1,8 @@
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { darkTheme } from './utils/Themes.js'
+import { darkTheme } from "./utils/Themes.js";
 import Navbar from "./components/Navbar";
-import './App.css';
+import "./App.css";
 import HeroSectionSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -15,6 +15,7 @@ import styled from "styled-components";
 import { HashRouter } from "react-router-dom";
 import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -43,34 +44,36 @@ function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <ThemeProvider theme={darkTheme}>
-      <HashRouter>
-        <Navbar />
-        <Body>
-          <StarCanvas />
-          <AnimatePresence>
-            <div>
-              <HeroSectionSection />
-              <Wrapper>
-                <Skills />
-                <Experience />
-              </Wrapper>
-              <Projects openModal={openModal} setOpenModal={setOpenModal} />
-              <Wrapper>
-                <Education />
-                <Contact />
-              </Wrapper>
-              <Footer />
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <HashRouter>
+          <Navbar />
+          <Body>
+            <StarCanvas />
+            <AnimatePresence>
+              <div>
+                <HeroSectionSection />
+                <Wrapper>
+                  <Skills />
+                  <Experience />
+                </Wrapper>
+                <Projects openModal={openModal} setOpenModal={setOpenModal} />
+                <Wrapper>
+                  <Education />
+                  <Contact />
+                </Wrapper>
+                <Footer />
 
-              {openModal.state && (
-                <ProjectDetails
-                  openModal={openModal}
-                  setOpenModal={setOpenModal}
-                />
-              )}
-            </div>
-          </AnimatePresence>
-        </Body>
-      </HashRouter>
+                {openModal.state && (
+                  <ProjectDetails
+                    openModal={openModal}
+                    setOpenModal={setOpenModal}
+                  />
+                )}
+              </div>
+            </AnimatePresence>
+          </Body>
+        </HashRouter>
+      </SkeletonTheme>
     </ThemeProvider>
   );
 }

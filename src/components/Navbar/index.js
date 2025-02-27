@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { supabase } from "../../supabaseClient";
 import {
   Nav,
   NavLink,
@@ -17,95 +16,74 @@ import {
 import { FaBars } from "react-icons/fa";
 import { Close, CloseRounded } from "@mui/icons-material";
 import { useTheme } from "styled-components";
+import { fetchBioData } from "../../api/supabase";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [navData, setNavData] = useState(null);
+  const [bioData, setBioData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const theme = useTheme();
 
   useEffect(() => {
-    fetchNavData();
-  }, []);
-
-  const fetchNavData = async () => {
-    try {
-      const { data, error } = await supabase
-        .from("bio")
-        .select("name, github")
-        .single();
-
-      if (error) {
-        console.error("Error fetching nav data:", error);
-        return;
+    const getBioData = async () => {
+      try {
+        setLoading(true);
+        const { data, error } = await fetchBioData();
+        if (!error && data) {
+          setBioData(data);
+        }
+      } catch (error) {
+        console.error("Error fetching bio data:", error);
+      } finally {
+        setLoading(false);
       }
-
-      setNavData(data);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
+    };
+    getBioData();
+  }, []);
 
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo>
-          <h3 style={{ color: `white` }}>{navData?.name || "Loading..."}</h3>
+          <h3 style={{ color: `white` }}>
+            {loading ? "Loading..." : bioData?.name || "Portfolio"}
+          </h3>
         </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => setIsOpen(!isOpen)} />
         </MobileIcon>
         <NavItems>
-          <NavLink href="/about">About</NavLink>
+          <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={navData?.github} target="_blank">
+          <GitHubButton
+            href={bioData?.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            disabled={!bioData?.github}
+          >
             Github Profile
           </GitHubButton>
         </ButtonContainer>
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <MobileLink
-              href="#about"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
+            <MobileLink href="#about" onClick={() => setIsOpen(false)}>
               About
             </MobileLink>
-            <MobileLink
-              href="#skills"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
+            <MobileLink href="#skills" onClick={() => setIsOpen(false)}>
               Skills
             </MobileLink>
-            <MobileLink
-              href="#experience"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
+            <MobileLink href="#experience" onClick={() => setIsOpen(false)}>
               Experience
             </MobileLink>
-            <MobileLink
-              href="#projects"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
+            <MobileLink href="#projects" onClick={() => setIsOpen(false)}>
               Projects
             </MobileLink>
-            <MobileLink
-              href="#education"
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
+            <MobileLink href="#education" onClick={() => setIsOpen(false)}>
               Education
             </MobileLink>
             <GitHubButton
@@ -115,8 +93,10 @@ const Navbar = () => {
                 color: "white",
                 width: "max-content",
               }}
-              href={navData?.github_url}
+              href={bioData?.github}
               target="_blank"
+              rel="noopener noreferrer"
+              disabled={!bioData?.github}
             >
               Github Profile
             </GitHubButton>

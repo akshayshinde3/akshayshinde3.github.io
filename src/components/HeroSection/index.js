@@ -1,6 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { supabase } from "../../supabaseClient";
-import HeroBgAnimation from "../HeroBgAnimation";
+import React, { useEffect, useState, Suspense } from "react";
+import { motion, LazyMotion, domAnimation } from "framer-motion";
+import styled, { useTheme } from "styled-components";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { fetchBioData } from "../../api/supabase";
+import _default from "../../themes/default";
+import {
+  headContainerAnimation,
+  headContentAnimation,
+  headTextAnimation,
+} from "../../utils/motion";
 import {
   HeroContainer,
   HeroBg,
@@ -14,104 +23,147 @@ import {
   SubTitle,
   ResumeButton,
   FloatingImage,
+  LoadingContainer,
 } from "./HeroStyle";
-import Typewriter from "typewriter-effect";
-import { motion } from "framer-motion";
-import {
-  headContainerAnimation,
-  headContentAnimation,
-  headTextAnimation,
-} from "../../utils/motion";
-import { Tilt } from "react-tilt";
-import StarCanvas from "../canvas/Stars";
+
+// Styled components for skeletons
+const TextSkeleton = styled(Skeleton)`
+  height: 2em;
+  width: 200px;
+  margin-bottom: 1em;
+`;
+
+const ImageSkeleton = styled(Skeleton)`
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+`;
+
+// Lazy load non-critical components
+const Typewriter = React.lazy(() => import("typewriter-effect"));
+const Tilt = React.lazy(() =>
+  import("react-tilt").then((mod) => ({ default: mod.Tilt }))
+);
+const HeroBgAnimation = React.lazy(() => import("../HeroBgAnimation"));
+const StarCanvas = React.lazy(() => import("../canvas/Stars"));
 
 const HeroSection = () => {
-  const [bioData, setBioData] = useState({
-    name: "",
-    roles: [],
-    description: "",
-    resume: "",
-    Image: "", // Add image_url to store the fetched image URL
-  });
+  const [bioData, setBioData] = useState({});
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const theme = useTheme();
 
+  // Prefetch and cache bio data
   useEffect(() => {
-    const fetchBioData = async () => {
-      const { data, error } = await supabase.from("bio").select("*").single(); // Fetch a single record
-      if (error) {
-        console.error("Error fetching bio data:", error);
-      } else {
+    const preFetchData = async () => {
+      const cachedData = sessionStorage.getItem("bioData");
+      if (cachedData) {
+        setBioData(JSON.parse(cachedData));
+        return;
+      }
+
+      const { data } = await fetchBioData();
+      if (data) {
+        sessionStorage.setItem("bioData", JSON.stringify(data));
         setBioData(data);
       }
     };
 
-    fetchBioData();
+    preFetchData();
   }, []);
 
+  // Preload hero image
+  useEffect(() => {
+    if (bioData?.image) {
+      const img = new Image();
+      img.src = bioData.image;
+      img.onload = () => setImageLoaded(true);
+    }
+  }, [bioData?.image]);
+
   return (
-    <div id="about">
-      <HeroContainer>
-        <HeroBg>
-          <StarCanvas />
-          <HeroBgAnimation />
-        </HeroBg>
+    <LazyMotion features={domAnimation}>
+      <div id="about">
+        <HeroContainer>
+          <HeroBg>
+            <Suspense fallback={null}>
+              <StarCanvas />
+              <HeroBgAnimation />
+            </Suspense>
+          </HeroBg>
 
-        <motion.div {...headContainerAnimation}>
-          <HeroInnerContainer>
-            <HeroLeftContainer>
-              <motion.div {...headTextAnimation}>
-                <Title>
-                  Hi, I am <br /> {bioData.name}
-                </Title>
-                <TextLoop>
-                  <Span>
-                    <Typewriter
-                      options={{
-                        strings: bioData.roles,
-                        autoStart: true,
-                        loop: true,
-                      }}
-                    />
-                  </Span>
-                </TextLoop>
-              </motion.div>
+          <motion.div {...headContainerAnimation}>
+            <HeroInnerContainer>
+              <HeroLeftContainer>
+                <motion.div {...headTextAnimation}>
+                  <Title>
+                    {bioData.name ? (
+                      <>
+                        Hi, I am <br /> {bioData.name}
+                      </>
+                    ) : (
+                      <TextSkeleton />
+                    )}
+                  </Title>
+                  <TextLoop>
+                    <Span>
+                      <Suspense fallback={<TextSkeleton />}>
+                        <Typewriter
+                          options={{
+                            strings: bioData.roles || [],
+                            autoStart: true,
+                            loop: true,
+                            delay: 50,
+                          }}
+                        />
+                      </Suspense>
+                    </Span>
+                  </TextLoop>
+                </motion.div>
 
-              <motion.div {...headContentAnimation}>
-                <SubTitle>{bioData.description}</SubTitle>
-              </motion.div>
+                <motion.div {...headContentAnimation}>
+                  {bioData.description ? (
+                    <SubTitle>{bioData.description}</SubTitle>
+                  ) : (
+                    <TextSkeleton count={3} />
+                  )}
+                </motion.div>
 
-              <ResumeButton href={bioData.resume} target="_blank">
-                Check Resume
-              </ResumeButton>
-            </HeroLeftContainer>
-            <HeroRightContainer>
-              <motion.div {...headContentAnimation}>
-                <Tilt options={{ max: 25, scale: 1.05 }}>
-                  <FloatingImage
-                    initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                    animate={{
-                      opacity: 1,
-                      scale: 1,
-                      y: 0,
-                    }}
-                    transition={{
-                      duration: 0.8,
-                      ease: "easeOut",
-                    }}
-                  >
-                    <Img
-                      src={bioData.image}
-                      alt={bioData.name}
-                      loading="lazy"
-                    />
-                  </FloatingImage>
-                </Tilt>
-              </motion.div>
-            </HeroRightContainer>
-          </HeroInnerContainer>
-        </motion.div>
-      </HeroContainer>
-    </div>
+                <ResumeButton
+                  href={bioData.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Check Resume
+                </ResumeButton>
+              </HeroLeftContainer>
+
+              <HeroRightContainer>
+                <motion.div {...headContentAnimation}>
+                  <Suspense fallback={<ImageSkeleton />}>
+                    <Tilt options={{ max: 25, scale: 1.05 }}>
+                      <FloatingImage
+                        initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                      >
+                        <Img
+                          src={bioData.image}
+                          alt={bioData.name || "Profile"}
+                          loading="lazy"
+                          width="400"
+                          height="400"
+                        />
+                      </FloatingImage>
+                    </Tilt>
+                  </Suspense>
+                </motion.div>
+              </HeroRightContainer>
+            </HeroInnerContainer>
+          </motion.div>
+        </HeroContainer>
+      </div>
+    </LazyMotion>
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);

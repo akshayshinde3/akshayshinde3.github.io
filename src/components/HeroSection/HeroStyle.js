@@ -1,6 +1,14 @@
-import styled from "styled-components";
-import { motion } from 'framer-motion';
-import _default from "../../themes/default";
+import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
+
+const shimmer = keyframes`
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+`;
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -212,7 +220,7 @@ export const FloatingImage = styled(motion.div)`
   animation: float 6s ease-in-out infinite;
   position: relative;
   filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.25));
-  
+
   @keyframes float {
     0% {
       transform: translateY(0px);
@@ -224,4 +232,15 @@ export const FloatingImage = styled(motion.div)`
       transform: translateY(0px);
     }
   }
+`;
+
+export const LoadingContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${({ theme }) => theme.card_light};
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 1.5rem;
 `;

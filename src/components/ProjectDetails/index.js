@@ -145,7 +145,7 @@ const MemberImage = styled.img`
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border: 2px solid ${({ theme }) => theme.primary};
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
@@ -165,7 +165,7 @@ const AssociationImage = styled.img`
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border: 2px solid ${({ theme }) => theme.text_secondary};
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
@@ -235,7 +235,7 @@ const Button = styled.a`
 const index = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
   const placeholderImage = "https://via.placeholder.com/150";
-  
+
   const handleImageError = (e) => {
     e.target.src = placeholderImage;
   };
@@ -256,7 +256,10 @@ const index = ({ openModal, setOpenModal }) => {
             }}
             onClick={() => setOpenModal({ state: false, project: null })}
           />
-          <Image src={project?.image || placeholderImage} onError={handleImageError} />
+          <Image
+            src={project?.image || placeholderImage}
+            onError={handleImageError}
+          />
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
           {project.associations?.length > 0 && (
@@ -265,8 +268,8 @@ const index = ({ openModal, setOpenModal }) => {
               <Associations>
                 {project.associations.map((assoc) => (
                   <Association key={assoc.id}>
-                    <AssociationImage 
-                      src={assoc.img || placeholderImage} 
+                    <AssociationImage
+                      src={assoc.img || placeholderImage}
                       onError={handleImageError}
                     />
                     <AssociationName>{assoc.name}</AssociationName>
@@ -297,8 +300,8 @@ const index = ({ openModal, setOpenModal }) => {
               <Members>
                 {project.members.map((member) => (
                   <Member key={member.id}>
-                    <MemberImage 
-                      src={member.img || placeholderImage} 
+                    <MemberImage
+                      src={member.img || placeholderImage}
                       onError={handleImageError}
                     />
                     <MemberName>{member.name}</MemberName>

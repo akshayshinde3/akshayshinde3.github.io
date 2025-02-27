@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo, useState, useCallback } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -43,6 +43,13 @@ const Image = styled.img`
   background-color: ${({ theme }) => theme.white};
   border-radius: 10px;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  object-fit: cover; // Ensure images cover the space properly
+  ${({ isLoading }) =>
+    isLoading &&
+    `
+    filter: blur(10px);
+    transition: filter 0.3s ease-out;
+  `}
 `;
 
 const Tags = styled.div`
@@ -143,38 +150,130 @@ const AssociationAvatar = styled(Avatar)`
   }
 `;
 
-const ProjectCards = ({ project, setOpenModal }) => {
-  const placeholderImage = "https://via.placeholder.com/150";
+// Replace the optimizeImageUrl implementation
+const optimizeImageUrl = (url) => {
+  if (!url || url === "https://via.placeholder.com/150") return url;
+  if (url.includes("format=webp")) return url;
+  if (url.includes("cloudinary.com")) {
+    return url.replace("/upload/", "/upload/w_330,h_180,f_auto,q_auto/");
+  }
+  return url;
+};
+
+// Update OptimizedImage component
+const OptimizedImage = memo(({ src, alt, onLoad, onError, isLoading }) => {
+  const optimizedSrc = optimizeImageUrl(src);
 
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image || placeholderImage} />
+    <Image
+      src={optimizedSrc}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      onLoad={onLoad}
+      onError={onError}
+      isLoading={isLoading}
+    />
+  );
+});
+
+// Update OptimizedAvatar component
+const OptimizedAvatar = memo(({ member, type, placeholderImage }) => {
+  const AvatarComponent = type === "member" ? MemberAvatar : AssociationAvatar;
+  const optimizedSrc = optimizeImageUrl(member.img) || placeholderImage;
+
+  return (
+    <AvatarComponent
+      src={optimizedSrc}
+      alt={`${type === "member" ? "Team member" : "Association"} ${
+        member.name || ""
+      }`}
+      loading="lazy"
+      decoding="async"
+      onError={(e) => {
+        e.target.src = placeholderImage;
+      }}
+    />
+  );
+});
+
+// Update ProjectCards component
+const ProjectCards = memo(({ project, setOpenModal }) => {
+  const placeholderImage = "https://via.placeholder.com/150";
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = useCallback(() => {
+    setImageLoaded(true);
+  }, []);
+
+  const handleImageError = useCallback(
+    (e) => {
+      e.target.src = placeholderImage;
+    },
+    [placeholderImage]
+  );
+
+  const handleCardClick = useCallback(() => {
+    setOpenModal({ state: true, project });
+  }, [project, setOpenModal]);
+
+  const optimizedProjectImage =
+    optimizeImageUrl(project.image) || placeholderImage;
+
+  return (
+    <Card onClick={handleCardClick}>
+      <OptimizedImage
+        src={optimizedProjectImage}
+        alt={project.title}
+        onLoad={handleImageLoad}
+        onError={handleImageError}
+        isLoading={!imageLoaded}
+      />
+
       <Tags>
-        {project.tags?.map((tag, index) => (
-          <Tag key={index}>{tag}</Tag>
+        {project.tags?.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
         ))}
       </Tags>
+
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
         <Description>{project.description}</Description>
       </Details>
-      {/* Only render members section if there are members */}
-      {project.members && project.members.length > 0 && (
+
+      {project.members?.length > 0 && (
         <Members>
           {project.members.map((member) => (
-            <MemberAvatar
+            <OptimizedAvatar
               key={member.id}
-              src={member.img || placeholderImage}
-              onError={(e) => {
-                e.target.src = placeholderImage;
-              }}
+              member={member}
+              type="member"
+              placeholderImage={placeholderImage}
+            />
+          ))}
+        </Members>
+      )}
+
+      {project.associations?.length > 0 && (
+        <Members isLast>
+          {project.associations.map((assoc) => (
+            <OptimizedAvatar
+              key={assoc.id}
+              member={assoc}
+              type="association"
+              placeholderImage={placeholderImage}
             />
           ))}
         </Members>
       )}
     </Card>
   );
-};
+});
+
+// Add display names for better debugging
+ProjectCards.displayName = "ProjectCards";
+OptimizedImage.displayName = "OptimizedImage";
+OptimizedAvatar.displayName = "OptimizedAvatar";
 
 export default ProjectCards;

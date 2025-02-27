@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Wrapper, Title } from "./ProjectsStyle";
 import ProjectCard from "../Cards/ProjectCards";
-import { supabase } from "../../supabaseClient";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
+import { fetchProjects } from "../../data/SupabaseData";
 
 // Add these animation variants at the top after your imports
 const popUpVariants = {
@@ -69,21 +69,6 @@ const categoryVariants = {
   },
 };
 
-// Update the ProjectsContainer styling
-// const ProjectsContainer = styled(motion.div)`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-wrap: wrap;
-//   gap: 28px;
-//   padding: 20px;
-
-//   @media (max-width: 768px) {
-//     gap: 16px;
-//     padding: 10px;
-//   }
-// `;
-
 // Update the CardContainer styling
 const CardContainer = styled(motion.div)`
   display: grid;
@@ -126,64 +111,6 @@ const ToggleButtonGroup = styled.div`
   }
 `;
 
-// Add this after your existing styled components
-// const ScrollIndicator = styled.div`
-//   display: none;
-
-//   @media (max-width: 768px) {
-//     display: block;
-//     position: absolute;
-//     right: 0;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     width: 24px;
-//     height: 100%;
-//     background: linear-gradient(
-//       to right,
-//       transparent,
-//       ${({ theme }) => theme.bg}
-//     );
-//     pointer-events: none;
-//   }
-// `;
-
-// Add these styled components after your existing ones
-// const ScrollArrow = styled.button`
-//   display: none;
-
-//   @media (max-width: 768px) {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background: ${({ theme }) => theme.primary + "15"};
-//     border: none;
-//     color: ${({ theme }) => theme.primary};
-//     font-size: 20px;
-//     font-weight: 600;
-//     cursor: pointer;
-//     padding: 8px;
-//     width: 36px;
-//     height: 36px;
-//     border-radius: 10px;
-//     transition: all 0.3s ease;
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     ${({ direction }) => (direction === "left" ? "left: 0;" : "right: 0;")}
-//     opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
-//     pointer-events: ${({ isVisible }) => (isVisible ? "auto" : "none")};
-
-//     &:hover {
-//       background: ${({ theme }) => theme.primary + "30"};
-//       transform: translateY(-50%) scale(1.1);
-//     }
-
-//     &:active {
-//       transform: translateY(-50%) scale(0.95);
-//     }
-//   }
-// `;
-
 // Add the NavigationArrow component
 const NavigationArrow = styled(motion.button)`
   display: flex;
@@ -209,37 +136,6 @@ const NavigationArrow = styled(motion.button)`
     height: 36px;
   }
 `;
-
-// Update the MobileArrow styling
-// const MobileArrow = styled.button`
-//   display: none;
-
-//   @media (max-width: 768px) {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background: ${({ theme }) => `${theme.primary}15`};
-//     border: none;
-//     color: ${({ theme }) => theme.primary};
-//     font-size: 20px;
-//     font-weight: 600;
-//     cursor: pointer;
-//     padding: 8px;
-//     width: 36px;
-//     height: 36px;
-//     border-radius: 10px;
-//     transition: all 0.3s ease;
-
-//     &:hover {
-//       background: ${({ theme }) => `${theme.primary}30`};
-//       transform: scale(1.1);
-//     }
-
-//     &:active {
-//       transform: scale(0.95);
-//     }
-//   }
-// `;
 
 // Update the ToggleButton styling
 const ToggleButton = styled(motion.button)`
@@ -315,26 +211,6 @@ const Projects = ({ openModal, setOpenModal }) => {
     },
   };
 
-  // Update the itemVariants
-  // const itemVariants = {
-  //   hidden: {
-  //     y: 20,
-  //     opacity: 0,
-  //     scale: 0.95,
-  //   },
-  //   visible: {
-  //     y: 0,
-  //     opacity: 1,
-  //     scale: 1,
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 300,
-  //       damping: 20,
-  //       duration: 0.4,
-  //     },
-  //   },
-  // };
-
   // Add the titleVariants
   const titleVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -349,21 +225,18 @@ const Projects = ({ openModal, setOpenModal }) => {
   };
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const { data, error } = await supabase
-        .from("projects")
-        .select("*,members(*),associations(*)");
+    const fetchProjectsData = async () => {
+      const { data, error } = await fetchProjects();
       if (error) {
         console.error("Error fetching projects:", error);
       } else {
-        console.log("Project data:", data); // Check the structure
+        console.log("Project data:", data);
         setProjects(data);
       }
     };
-    fetchProjects();
+    fetchProjectsData();
   }, []);
 
-  // Add this inside your Projects component, before the return statement
   const checkScroll = () => {
     if (toggleGroupRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = toggleGroupRef.current;
@@ -371,16 +244,6 @@ const Projects = ({ openModal, setOpenModal }) => {
       setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
     }
   };
-
-  // const scroll = (direction) => {
-  //   if (toggleGroupRef.current) {
-  //     const scrollAmount = 200;
-  //     toggleGroupRef.current.scrollBy({
-  //       left: direction === "left" ? -scrollAmount : scrollAmount,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
 
   useEffect(() => {
     const toggleGroup = toggleGroupRef.current;
